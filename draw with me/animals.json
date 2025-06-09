@@ -1,0 +1,2559 @@
+{
+  "animals": [
+    {
+      "name": "cat",
+      "tier": 1,
+      "difficulty": "easy",
+      "steps": [
+        {
+          "instruction": "Start with a big round head - this will be our cat's face!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 25, "y": 25},
+              "radius": 18
+            }
+          ]
+        },
+        {
+          "instruction": "Add two pointy ears on top - cats have triangular ears!",
+          "shapes": [
+            {
+              "type": "triangle",
+              "p1": {"x": 12, "y": 8},
+              "p2": {"x": 20, "y": 8},
+              "p3": {"x": 16, "y": 18}
+            },
+            {
+              "type": "triangle",
+              "p1": {"x": 30, "y": 8},
+              "p2": {"x": 38, "y": 8},
+              "p3": {"x": 34, "y": 18}
+            }
+          ]
+        },
+        {
+          "instruction": "Make the ears extra cute with pink inner ears!",
+          "shapes": [
+            {
+              "type": "triangle",
+              "p1": {"x": 14, "y": 12},
+              "p2": {"x": 18, "y": 12},
+              "p3": {"x": 16, "y": 16}
+            },
+            {
+              "type": "triangle",
+              "p1": {"x": 32, "y": 12},
+              "p2": {"x": 36, "y": 12},
+              "p3": {"x": 34, "y": 16}
+            }
+          ]
+        },
+        {
+          "instruction": "Draw two big round eyes - cats have beautiful eyes!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 19, "y": 22},
+              "radius": 3
+            },
+            {
+              "type": "circle",
+              "center": {"x": 31, "y": 22},
+              "radius": 3
+            }
+          ]
+        },
+        {
+          "instruction": "Add tiny black pupils in the center of each eye.",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 19, "y": 22},
+              "radius": 1
+            },
+            {
+              "type": "circle",
+              "center": {"x": 31, "y": 22},
+              "radius": 1
+            }
+          ]
+        },
+        {
+          "instruction": "Draw a small triangle nose - perfect for a kitty!",
+          "shapes": [
+            {
+              "type": "triangle",
+              "p1": {"x": 24, "y": 28},
+              "p2": {"x": 26, "y": 28},
+              "p3": {"x": 25, "y": 30}
+            }
+          ]
+        },
+        {
+          "instruction": "Add a sweet little smile under the nose.",
+          "shapes": [
+            {
+              "type": "polyline",
+              "points": [
+                {"x": 22, "y": 32},
+                {"x": 23, "y": 33},
+                {"x": 25, "y": 31},
+                {"x": 27, "y": 33},
+                {"x": 28, "y": 32}
+              ]
+            }
+          ]
+        },
+        {
+          "instruction": "Give our cat whiskers - three on each side for balance!",
+          "shapes": [
+            {
+              "type": "line",
+              "from": {"x": 8, "y": 28},
+              "to": {"x": 18, "y": 28}
+            },
+            {
+              "type": "line",
+              "from": {"x": 8, "y": 31},
+              "to": {"x": 18, "y": 31}
+            },
+            {
+              "type": "line",
+              "from": {"x": 8, "y": 34},
+              "to": {"x": 18, "y": 34}
+            },
+            {
+              "type": "line",
+              "from": {"x": 32, "y": 28},
+              "to": {"x": 42, "y": 28}
+            },
+            {
+              "type": "line",
+              "from": {"x": 32, "y": 31},
+              "to": {"x": 42, "y": 31}
+            },
+            {
+              "type": "line",
+              "from": {"x": 32, "y": 34},
+              "to": {"x": 42, "y": 34}
+            }
+          ]
+        },
+        {
+          "instruction": "Add small cheek spots to make our cat extra adorable!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 14, "y": 30},
+              "radius": 1
+            },
+            {
+              "type": "circle",
+              "center": {"x": 36, "y": 30},
+              "radius": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "dog",
+      "tier": 1,
+      "difficulty": "easy",
+      "steps": [
+        {
+          "instruction": "Start with a friendly round head for our puppy!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 25, "y": 25},
+              "radius": 16
+            }
+          ]
+        },
+        {
+          "instruction": "Add two adorable floppy ears - dogs love to listen!",
+          "shapes": [
+            {
+              "type": "polyline",
+              "points": [
+                {"x": 10, "y": 12},
+                {"x": 18, "y": 12},
+                {"x": 16, "y": 26},
+                {"x": 12, "y": 26},
+                {"x": 10, "y": 12}
+              ]
+            },
+            {
+              "type": "polyline",
+              "points": [
+                {"x": 32, "y": 12},
+                {"x": 40, "y": 12},
+                {"x": 38, "y": 26},
+                {"x": 34, "y": 26},
+                {"x": 32, "y": 12}
+              ]
+            }
+          ]
+        },
+        {
+          "instruction": "Draw two bright, happy eyes!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 20, "y": 22},
+              "radius": 2.5
+            },
+            {
+              "type": "circle",
+              "center": {"x": 30, "y": 22},
+              "radius": 2.5
+            }
+          ]
+        },
+        {
+          "instruction": "Add sparkly pupils to make the eyes come alive!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 20, "y": 22},
+              "radius": 1
+            },
+            {
+              "type": "circle",
+              "center": {"x": 30, "y": 22},
+              "radius": 1
+            }
+          ]
+        },
+        {
+          "instruction": "Create a cute snout - dogs have longer noses than cats!",
+          "shapes": [
+            {
+              "type": "ellipse",
+              "center": {"x": 25, "y": 32},
+              "radiusX": 6,
+              "radiusY": 4
+            }
+          ]
+        },
+        {
+          "instruction": "Add a wet little nose at the tip of the snout!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 25, "y": 30},
+              "radius": 1.5
+            }
+          ]
+        },
+        {
+          "instruction": "Draw a happy panting mouth with a little tongue!",
+          "shapes": [
+            {
+              "type": "polyline",
+              "points": [
+                {"x": 22, "y": 35},
+                {"x": 23, "y": 36},
+                {"x": 25, "y": 35},
+                {"x": 27, "y": 36},
+                {"x": 28, "y": 35}
+              ]
+            },
+            {
+              "type": "ellipse",
+              "center": {"x": 25, "y": 37},
+              "radiusX": 2,
+              "radiusY": 1
+            }
+          ]
+        },
+        {
+          "instruction": "Add cute eyebrow spots - many dogs have these markings!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 18, "y": 18},
+              "radius": 1
+            },
+            {
+              "type": "circle",
+              "center": {"x": 32, "y": 18},
+              "radius": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "horse",
+      "tier": 2,
+      "difficulty": "easy_plus",
+      "steps": [
+        {
+          "instruction": "Start with an elegant oval head - horses have long faces!",
+          "shapes": [
+            {
+              "type": "ellipse",
+              "center": {"x": 25, "y": 25},
+              "radiusX": 10,
+              "radiusY": 16
+            }
+          ]
+        },
+        {
+          "instruction": "Add two alert pointy ears on top!",
+          "shapes": [
+            {
+              "type": "triangle",
+              "p1": {"x": 19, "y": 10},
+              "p2": {"x": 23, "y": 10},
+              "p3": {"x": 21, "y": 18}
+            },
+            {
+              "type": "triangle",
+              "p1": {"x": 27, "y": 10},
+              "p2": {"x": 31, "y": 10},
+              "p3": {"x": 29, "y": 18}
+            }
+          ]
+        },
+        {
+          "instruction": "Add inner ears to make them look more realistic!",
+          "shapes": [
+            {
+              "type": "triangle",
+              "p1": {"x": 20, "y": 13},
+              "p2": {"x": 22, "y": 13},
+              "p3": {"x": 21, "y": 16}
+            },
+            {
+              "type": "triangle",
+              "p1": {"x": 28, "y": 13},
+              "p2": {"x": 30, "y": 13},
+              "p3": {"x": 29, "y": 16}
+            }
+          ]
+        },
+        {
+          "instruction": "Draw two large, gentle eyes - horses have beautiful eyes!",
+          "shapes": [
+            {
+              "type": "ellipse",
+              "center": {"x": 21, "y": 22},
+              "radiusX": 2,
+              "radiusY": 2.5
+            },
+            {
+              "type": "ellipse",
+              "center": {"x": 29, "y": 22},
+              "radiusX": 2,
+              "radiusY": 2.5
+            }
+          ]
+        },
+        {
+          "instruction": "Add pupils to bring the eyes to life!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 21, "y": 22},
+              "radius": 1
+            },
+            {
+              "type": "circle",
+              "center": {"x": 29, "y": 22},
+              "radius": 1
+            }
+          ]
+        },
+        {
+          "instruction": "Create the horse's distinctive long snout!",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "origin": {"x": 22, "y": 34},
+              "size": {"width": 6, "height": 5}
+            }
+          ]
+        },
+        {
+          "instruction": "Add two nostrils - horses need big nostrils to breathe!",
+          "shapes": [
+            {
+              "type": "ellipse",
+              "center": {"x": 23.5, "y": 36},
+              "radiusX": 0.8,
+              "radiusY": 1.2
+            },
+            {
+              "type": "ellipse",
+              "center": {"x": 26.5, "y": 36},
+              "radiusX": 0.8,
+              "radiusY": 1.2
+            }
+          ]
+        },
+        {
+          "instruction": "Draw a gentle mouth line below the nostrils.",
+          "shapes": [
+            {
+              "type": "line",
+              "from": {"x": 23, "y": 38},
+              "to": {"x": 27, "y": 38}
+            }
+          ]
+        },
+        {
+          "instruction": "Add a beautiful flowing mane across the forehead!",
+          "shapes": [
+            {
+              "type": "polyline",
+              "points": [
+                {"x": 18, "y": 16},
+                {"x": 20, "y": 14},
+                {"x": 22, "y": 16},
+                {"x": 24, "y": 14},
+                {"x": 26, "y": 16},
+                {"x": 28, "y": 14},
+                {"x": 30, "y": 16},
+                {"x": 32, "y": 14}
+              ]
+            }
+          ]
+        },
+        {
+          "instruction": "Add a small star marking on the forehead - many horses have this!",
+          "shapes": [
+            {
+              "type": "polyline",
+              "points": [
+                {"x": 25, "y": 17},
+                {"x": 24, "y": 19},
+                {"x": 25, "y": 20},
+                {"x": 26, "y": 19},
+                {"x": 25, "y": 17}
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "panda",
+      "tier": 1,
+      "difficulty": "easy",
+      "steps": [
+        {
+          "instruction": "Start with a big round head - pandas have chubby faces!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 25, "y": 25},
+              "radius": 16
+            }
+          ]
+        },
+        {
+          "instruction": "Add two perfectly round ears on top!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 14, "y": 12},
+              "radius": 5
+            },
+            {
+              "type": "circle",
+              "center": {"x": 36, "y": 12},
+              "radius": 5
+            }
+          ]
+        },
+        {
+          "instruction": "Create the famous panda eye patches - these make pandas special!",
+          "shapes": [
+            {
+              "type": "ellipse",
+              "center": {"x": 20, "y": 22},
+              "radiusX": 4,
+              "radiusY": 5
+            },
+            {
+              "type": "ellipse",
+              "center": {"x": 30, "y": 22},
+              "radiusX": 4,
+              "radiusY": 5
+            }
+          ]
+        },
+        {
+          "instruction": "Add bright little eyes inside the patches!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 20, "y": 22},
+              "radius": 1.5
+            },
+            {
+              "type": "circle",
+              "center": {"x": 30, "y": 22},
+              "radius": 1.5
+            }
+          ]
+        },
+        {
+          "instruction": "Draw a small triangle nose - pandas have cute button noses!",
+          "shapes": [
+            {
+              "type": "triangle",
+              "p1": {"x": 24, "y": 29},
+              "p2": {"x": 26, "y": 29},
+              "p3": {"x": 25, "y": 31}
+            }
+          ]
+        },
+        {
+          "instruction": "Add a gentle oval muzzle area around the nose!",
+          "shapes": [
+            {
+              "type": "ellipse",
+              "center": {"x": 25, "y": 32},
+              "radiusX": 5,
+              "radiusY": 3
+            }
+          ]
+        },
+        {
+          "instruction": "Draw a sweet little smile - pandas always look happy!",
+          "shapes": [
+            {
+              "type": "polyline",
+              "points": [
+                {"x": 23, "y": 35},
+                {"x": 24, "y": 36},
+                {"x": 25, "y": 35},
+                {"x": 26, "y": 36},
+                {"x": 27, "y": 35}
+              ]
+            }
+          ]
+        },
+        {
+          "instruction": "Add tiny cheek spots to make our panda extra adorable!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 16, "y": 30},
+              "radius": 1
+            },
+            {
+              "type": "circle",
+              "center": {"x": 34, "y": 30},
+              "radius": 1
+            }
+          ]
+        },
+        {
+          "instruction": "Give our panda some bamboo whisker spots!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 13, "y": 32},
+              "radius": 0.5
+            },
+            {
+              "type": "circle",
+              "center": {"x": 37, "y": 32},
+              "radius": 0.5
+            },
+            {
+              "type": "circle",
+              "center": {"x": 13, "y": 28},
+              "radius": 0.5
+            },
+            {
+              "type": "circle",
+              "center": {"x": 37, "y": 28},
+              "radius": 0.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "bear",
+      "tier": 1,
+      "difficulty": "easy",
+      "steps": [
+        {
+          "instruction": "Start with a big round head - bears have chubby faces!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 25, "y": 25},
+              "radius": 16
+            }
+          ]
+        },
+        {
+          "instruction": "Add two small round ears on top!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 15, "y": 12},
+              "radius": 4
+            },
+            {
+              "type": "circle",
+              "center": {"x": 35, "y": 12},
+              "radius": 4
+            }
+          ]
+        },
+        {
+          "instruction": "Draw two friendly eyes!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 20, "y": 22},
+              "radius": 2
+            },
+            {
+              "type": "circle",
+              "center": {"x": 30, "y": 22},
+              "radius": 2
+            }
+          ]
+        },
+        {
+          "instruction": "Add a round black nose!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 25, "y": 28},
+              "radius": 2
+            }
+          ]
+        },
+        {
+          "instruction": "Draw a gentle smile under the nose!",
+          "shapes": [
+            {
+              "type": "polyline",
+              "points": [
+                {"x": 22, "y": 32},
+                {"x": 25, "y": 34},
+                {"x": 28, "y": 32}
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pig",
+      "tier": 1,
+      "difficulty": "easy",
+      "steps": [
+        {
+          "instruction": "Start with a round pink head!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 25, "y": 25},
+              "radius": 15
+            }
+          ]
+        },
+        {
+          "instruction": "Add two pointy ears on top!",
+          "shapes": [
+            {
+              "type": "triangle",
+              "p1": {"x": 16, "y": 12},
+              "p2": {"x": 20, "y": 12},
+              "p3": {"x": 18, "y": 18}
+            },
+            {
+              "type": "triangle",
+              "p1": {"x": 30, "y": 12},
+              "p2": {"x": 34, "y": 12},
+              "p3": {"x": 32, "y": 18}
+            }
+          ]
+        },
+        {
+          "instruction": "Draw two small eyes!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 21, "y": 21},
+              "radius": 1.5
+            },
+            {
+              "type": "circle",
+              "center": {"x": 29, "y": 21},
+              "radius": 1.5
+            }
+          ]
+        },
+        {
+          "instruction": "Add a cute snout - pigs have special noses!",
+          "shapes": [
+            {
+              "type": "ellipse",
+              "center": {"x": 25, "y": 30},
+              "radiusX": 4,
+              "radiusY": 3
+            }
+          ]
+        },
+        {
+          "instruction": "Draw two nostrils on the snout!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 23, "y": 30},
+              "radius": 0.8
+            },
+            {
+              "type": "circle",
+              "center": {"x": 27, "y": 30},
+              "radius": 0.8
+            }
+          ]
+        },
+        {
+          "instruction": "Add a happy little smile!",
+          "shapes": [
+            {
+              "type": "polyline",
+              "points": [
+                {"x": 22, "y": 34},
+                {"x": 25, "y": 36},
+                {"x": 28, "y": 34}
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "frog",
+      "tier": 1,
+      "difficulty": "easy",
+      "steps": [
+        {
+          "instruction": "Start with a round green head!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 25, "y": 25},
+              "radius": 14
+            }
+          ]
+        },
+        {
+          "instruction": "Add two big bulging eyes on top!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 20, "y": 16},
+              "radius": 4
+            },
+            {
+              "type": "circle",
+              "center": {"x": 30, "y": 16},
+              "radius": 4
+            }
+          ]
+        },
+        {
+          "instruction": "Draw pupils in the big eyes!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 20, "y": 16},
+              "radius": 1.5
+            },
+            {
+              "type": "circle",
+              "center": {"x": 30, "y": 16},
+              "radius": 1.5
+            }
+          ]
+        },
+        {
+          "instruction": "Add two tiny nostrils!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 23, "y": 26},
+              "radius": 0.5
+            },
+            {
+              "type": "circle",
+              "center": {"x": 27, "y": 26},
+              "radius": 0.5
+            }
+          ]
+        },
+        {
+          "instruction": "Draw a wide smile - frogs are happy!",
+          "shapes": [
+            {
+              "type": "polyline",
+              "points": [
+                {"x": 18, "y": 30},
+                {"x": 22, "y": 32},
+                {"x": 25, "y": 31},
+                {"x": 28, "y": 32},
+                {"x": 32, "y": 30}
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "owl",
+      "tier": 1,
+      "difficulty": "easy",
+      "steps": [
+        {
+          "instruction": "Start with a round head - owls have big heads!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 25, "y": 25},
+              "radius": 16
+            }
+          ]
+        },
+        {
+          "instruction": "Add two ear tufts on top!",
+          "shapes": [
+            {
+              "type": "triangle",
+              "p1": {"x": 18, "y": 10},
+              "p2": {"x": 22, "y": 10},
+              "p3": {"x": 20, "y": 16}
+            },
+            {
+              "type": "triangle",
+              "p1": {"x": 28, "y": 10},
+              "p2": {"x": 32, "y": 10},
+              "p3": {"x": 30, "y": 16}
+            }
+          ]
+        },
+        {
+          "instruction": "Draw two huge round eyes - owls have amazing eyes!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 20, "y": 22},
+              "radius": 5
+            },
+            {
+              "type": "circle",
+              "center": {"x": 30, "y": 22},
+              "radius": 5
+            }
+          ]
+        },
+        {
+          "instruction": "Add pupils in the center of each eye!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 20, "y": 22},
+              "radius": 2
+            },
+            {
+              "type": "circle",
+              "center": {"x": 30, "y": 22},
+              "radius": 2
+            }
+          ]
+        },
+        {
+          "instruction": "Draw a hooked beak - owls are hunters!",
+          "shapes": [
+            {
+              "type": "triangle",
+              "p1": {"x": 24, "y": 30},
+              "p2": {"x": 26, "y": 30},
+              "p3": {"x": 25, "y": 33}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "monkey",
+      "tier": 1,
+      "difficulty": "easy",
+      "steps": [
+        {
+          "instruction": "Start with a round head!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 25, "y": 25},
+              "radius": 15
+            }
+          ]
+        },
+        {
+          "instruction": "Add two big round ears!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 14, "y": 18},
+              "radius": 5
+            },
+            {
+              "type": "circle",
+              "center": {"x": 36, "y": 18},
+              "radius": 5
+            }
+          ]
+        },
+        {
+          "instruction": "Draw inner ears!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 14, "y": 18},
+              "radius": 2
+            },
+            {
+              "type": "circle",
+              "center": {"x": 36, "y": 18},
+              "radius": 2
+            }
+          ]
+        },
+        {
+          "instruction": "Add two bright eyes!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 21, "y": 22},
+              "radius": 2
+            },
+            {
+              "type": "circle",
+              "center": {"x": 29, "y": 22},
+              "radius": 2
+            }
+          ]
+        },
+        {
+          "instruction": "Draw a cute snout area!",
+          "shapes": [
+            {
+              "type": "ellipse",
+              "center": {"x": 25, "y": 30},
+              "radiusX": 4,
+              "radiusY": 3
+            }
+          ]
+        },
+        {
+          "instruction": "Add a small nose and smile!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 25, "y": 28},
+              "radius": 1
+            },
+            {
+              "type": "polyline",
+              "points": [
+                {"x": 22, "y": 32},
+                {"x": 25, "y": 34},
+                {"x": 28, "y": 32}
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "sheep",
+      "tier": 1,
+      "difficulty": "easy",
+      "steps": [
+        {
+          "instruction": "Start with a fluffy round head!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 25, "y": 25},
+              "radius": 16
+            }
+          ]
+        },
+        {
+          "instruction": "Add fluffy wool bumps around the head!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 12, "y": 20},
+              "radius": 3
+            },
+            {
+              "type": "circle",
+              "center": {"x": 38, "y": 20},
+              "radius": 3
+            },
+            {
+              "type": "circle",
+              "center": {"x": 25, "y": 8},
+              "radius": 3
+            },
+            {
+              "type": "circle",
+              "center": {"x": 18, "y": 11},
+              "radius": 2
+            },
+            {
+              "type": "circle",
+              "center": {"x": 32, "y": 11},
+              "radius": 2
+            }
+          ]
+        },
+        {
+          "instruction": "Draw two small ears!",
+          "shapes": [
+            {
+              "type": "ellipse",
+              "center": {"x": 16, "y": 16},
+              "radiusX": 2,
+              "radiusY": 3
+            },
+            {
+              "type": "ellipse",
+              "center": {"x": 34, "y": 16},
+              "radiusX": 2,
+              "radiusY": 3
+            }
+          ]
+        },
+        {
+          "instruction": "Add two dot eyes!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 21, "y": 22},
+              "radius": 1.5
+            },
+            {
+              "type": "circle",
+              "center": {"x": 29, "y": 22},
+              "radius": 1.5
+            }
+          ]
+        },
+        {
+          "instruction": "Draw a small black nose!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 25, "y": 28},
+              "radius": 1
+            }
+          ]
+        },
+        {
+          "instruction": "Add a gentle smile!",
+          "shapes": [
+            {
+              "type": "polyline",
+              "points": [
+                {"x": 23, "y": 32},
+                {"x": 25, "y": 33},
+                {"x": 27, "y": 32}
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "rabbit",
+      "tier": 1,
+      "difficulty": "easy",
+      "steps": [
+        {
+          "instruction": "Start with a round head!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 25, "y": 25},
+              "radius": 14
+            }
+          ]
+        },
+        {
+          "instruction": "Add two long ears - rabbits have special ears!",
+          "shapes": [
+            {
+              "type": "ellipse",
+              "center": {"x": 20, "y": 12},
+              "radiusX": 3,
+              "radiusY": 8
+            },
+            {
+              "type": "ellipse",
+              "center": {"x": 30, "y": 12},
+              "radiusX": 3,
+              "radiusY": 8
+            }
+          ]
+        },
+        {
+          "instruction": "Add pink inner ears!",
+          "shapes": [
+            {
+              "type": "ellipse",
+              "center": {"x": 20, "y": 12},
+              "radiusX": 1,
+              "radiusY": 4
+            },
+            {
+              "type": "ellipse",
+              "center": {"x": 30, "y": 12},
+              "radiusX": 1,
+              "radiusY": 4
+            }
+          ]
+        },
+        {
+          "instruction": "Draw two bright eyes!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 21, "y": 22},
+              "radius": 2
+            },
+            {
+              "type": "circle",
+              "center": {"x": 29, "y": 22},
+              "radius": 2
+            }
+          ]
+        },
+        {
+          "instruction": "Add a triangle nose - rabbits have cute noses!",
+          "shapes": [
+            {
+              "type": "triangle",
+              "p1": {"x": 24, "y": 28},
+              "p2": {"x": 26, "y": 28},
+              "p3": {"x": 25, "y": 30}
+            }
+          ]
+        },
+        {
+          "instruction": "Draw a sweet smile!",
+          "shapes": [
+            {
+              "type": "polyline",
+              "points": [
+                {"x": 22, "y": 32},
+                {"x": 25, "y": 34},
+                {"x": 28, "y": 32}
+              ]
+            }
+          ]
+        },
+        {
+          "instruction": "Add whiskers on both sides!",
+          "shapes": [
+            {
+              "type": "line",
+              "from": {"x": 15, "y": 29},
+              "to": {"x": 20, "y": 29}
+            },
+            {
+              "type": "line",
+              "from": {"x": 30, "y": 29},
+              "to": {"x": 35, "y": 29}
+            },
+            {
+              "type": "line",
+              "from": {"x": 15, "y": 32},
+              "to": {"x": 20, "y": 32}
+            },
+            {
+              "type": "line",
+              "from": {"x": 30, "y": 32},
+              "to": {"x": 35, "y": 32}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "mouse",
+      "tier": 1,
+      "difficulty": "easy",
+      "steps": [
+        {
+          "instruction": "Start with a small round head!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 25, "y": 25},
+              "radius": 12
+            }
+          ]
+        },
+        {
+          "instruction": "Add two big round ears!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 17, "y": 16},
+              "radius": 5
+            },
+            {
+              "type": "circle",
+              "center": {"x": 33, "y": 16},
+              "radius": 5
+            }
+          ]
+        },
+        {
+          "instruction": "Draw inner ears!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 17, "y": 16},
+              "radius": 2
+            },
+            {
+              "type": "circle",
+              "center": {"x": 33, "y": 16},
+              "radius": 2
+            }
+          ]
+        },
+        {
+          "instruction": "Add two bright little eyes!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 21, "y": 23},
+              "radius": 1.5
+            },
+            {
+              "type": "circle",
+              "center": {"x": 29, "y": 23},
+              "radius": 1.5
+            }
+          ]
+        },
+        {
+          "instruction": "Draw a tiny pink nose!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 25, "y": 27},
+              "radius": 1
+            }
+          ]
+        },
+        {
+          "instruction": "Add whiskers - mice have long whiskers!",
+          "shapes": [
+            {
+              "type": "line",
+              "from": {"x": 14, "y": 27},
+              "to": {"x": 20, "y": 27}
+            },
+            {
+              "type": "line",
+              "from": {"x": 30, "y": 27},
+              "to": {"x": 36, "y": 27}
+            },
+            {
+              "type": "line",
+              "from": {"x": 14, "y": 30},
+              "to": {"x": 20, "y": 30}
+            },
+            {
+              "type": "line",
+              "from": {"x": 30, "y": 30},
+              "to": {"x": 36, "y": 30}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "elephant",
+      "tier": 2,
+      "difficulty": "easy_plus",
+      "steps": [
+        {
+          "instruction": "Start with a big oval head!",
+          "shapes": [
+            {
+              "type": "ellipse",
+              "center": {"x": 25, "y": 20},
+              "radiusX": 12,
+              "radiusY": 10
+            }
+          ]
+        },
+        {
+          "instruction": "Add two large fan ears!",
+          "shapes": [
+            {
+              "type": "ellipse",
+              "center": {"x": 15, "y": 20},
+              "radiusX": 6,
+              "radiusY": 10
+            },
+            {
+              "type": "ellipse",
+              "center": {"x": 35, "y": 20},
+              "radiusX": 6,
+              "radiusY": 10
+            }
+          ]
+        },
+        {
+          "instruction": "Draw two small eyes!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 21, "y": 18},
+              "radius": 1.5
+            },
+            {
+              "type": "circle",
+              "center": {"x": 29, "y": 18},
+              "radius": 1.5
+            }
+          ]
+        },
+        {
+          "instruction": "Add a long curved trunk - elephants use trunks to grab things!",
+          "shapes": [
+            {
+              "type": "polyline",
+              "points": [
+                {"x": 25, "y": 28},
+                {"x": 26, "y": 32},
+                {"x": 24, "y": 36},
+                {"x": 26, "y": 40},
+                {"x": 22, "y": 42}
+              ]
+            }
+          ]
+        },
+        {
+          "instruction": "Draw the other side of the trunk to make it thick!",
+          "shapes": [
+            {
+              "type": "polyline",
+              "points": [
+                {"x": 27, "y": 29},
+                {"x": 28, "y": 33},
+                {"x": 26, "y": 37},
+                {"x": 28, "y": 41},
+                {"x": 24, "y": 43}
+              ]
+            }
+          ]
+        },
+        {
+          "instruction": "Add trunk tip and nostrils!",
+          "shapes": [
+            {
+              "type": "ellipse",
+              "center": {"x": 23, "y": 42.5},
+              "radiusX": 2,
+              "radiusY": 1
+            },
+            {
+              "type": "circle",
+              "center": {"x": 22, "y": 42},
+              "radius": 0.5
+            },
+            {
+              "type": "circle",
+              "center": {"x": 24, "y": 42},
+              "radius": 0.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "lion",
+      "tier": 2,
+      "difficulty": "easy_plus",
+      "steps": [
+        {
+          "instruction": "Start with a round head!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 25, "y": 25},
+              "radius": 12
+            }
+          ]
+        },
+        {
+          "instruction": "Add a magnificent mane around the head!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 15, "y": 18},
+              "radius": 3
+            },
+            {
+              "type": "circle",
+              "center": {"x": 35, "y": 18},
+              "radius": 3
+            },
+            {
+              "type": "circle",
+              "center": {"x": 12, "y": 25},
+              "radius": 3
+            },
+            {
+              "type": "circle",
+              "center": {"x": 38, "y": 25},
+              "radius": 3
+            },
+            {
+              "type": "circle",
+              "center": {"x": 15, "y": 32},
+              "radius": 3
+            },
+            {
+              "type": "circle",
+              "center": {"x": 35, "y": 32},
+              "radius": 3
+            },
+            {
+              "type": "circle",
+              "center": {"x": 25, "y": 12},
+              "radius": 3
+            },
+            {
+              "type": "circle",
+              "center": {"x": 20, "y": 14},
+              "radius": 2
+            },
+            {
+              "type": "circle",
+              "center": {"x": 30, "y": 14},
+              "radius": 2
+            }
+          ]
+        },
+        {
+          "instruction": "Draw two brave eyes!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 21, "y": 22},
+              "radius": 2
+            },
+            {
+              "type": "circle",
+              "center": {"x": 29, "y": 22},
+              "radius": 2
+            }
+          ]
+        },
+        {
+          "instruction": "Add a triangle nose - lions are big cats!",
+          "shapes": [
+            {
+              "type": "triangle",
+              "p1": {"x": 24, "y": 27},
+              "p2": {"x": 26, "y": 27},
+              "p3": {"x": 25, "y": 29}
+            }
+          ]
+        },
+        {
+          "instruction": "Draw a proud mouth!",
+          "shapes": [
+            {
+              "type": "polyline",
+              "points": [
+                {"x": 22, "y": 31},
+                {"x": 25, "y": 30},
+                {"x": 28, "y": 31}
+              ]
+            }
+          ]
+        },
+        {
+          "instruction": "Add whiskers - even lion kings have whiskers!",
+          "shapes": [
+            {
+              "type": "line",
+              "from": {"x": 16, "y": 28},
+              "to": {"x": 20, "y": 28}
+            },
+            {
+              "type": "line",
+              "from": {"x": 30, "y": 28},
+              "to": {"x": 34, "y": 28}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "tiger",
+      "tier": 2,
+      "difficulty": "easy_plus",
+      "steps": [
+        {
+          "instruction": "Start with a round head like a big cat!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 25, "y": 25},
+              "radius": 15
+            }
+          ]
+        },
+        {
+          "instruction": "Add two round ears on top!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 16, "y": 14},
+              "radius": 4
+            },
+            {
+              "type": "circle",
+              "center": {"x": 34, "y": 14},
+              "radius": 4
+            }
+          ]
+        },
+        {
+          "instruction": "Draw tiger stripes on the forehead!",
+          "shapes": [
+            {
+              "type": "line",
+              "from": {"x": 20, "y": 16},
+              "to": {"x": 22, "y": 20}
+            },
+            {
+              "type": "line",
+              "from": {"x": 25, "y": 15},
+              "to": {"x": 25, "y": 19}
+            },
+            {
+              "type": "line",
+              "from": {"x": 30, "y": 16},
+              "to": {"x": 28, "y": 20}
+            }
+          ]
+        },
+        {
+          "instruction": "Add two fierce but friendly eyes!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 20, "y": 23},
+              "radius": 2
+            },
+            {
+              "type": "circle",
+              "center": {"x": 30, "y": 23},
+              "radius": 2
+            }
+          ]
+        },
+        {
+          "instruction": "Draw a triangle nose!",
+          "shapes": [
+            {
+              "type": "triangle",
+              "p1": {"x": 24, "y": 28},
+              "p2": {"x": 26, "y": 28},
+              "p3": {"x": 25, "y": 30}
+            }
+          ]
+        },
+        {
+          "instruction": "Add a mouth and more stripes on the cheeks!",
+          "shapes": [
+            {
+              "type": "polyline",
+              "points": [
+                {"x": 22, "y": 32},
+                {"x": 25, "y": 31},
+                {"x": 28, "y": 32}
+              ]
+            },
+            {
+              "type": "line",
+              "from": {"x": 14, "y": 26},
+              "to": {"x": 18, "y": 28}
+            },
+            {
+              "type": "line",
+              "from": {"x": 32, "y": 28},
+              "to": {"x": 36, "y": 26}
+            },
+            {
+              "type": "line",
+              "from": {"x": 14, "y": 30},
+              "to": {"x": 18, "y": 32}
+            },
+            {
+              "type": "line",
+              "from": {"x": 32, "y": 32},
+              "to": {"x": 36, "y": 30}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "fox",
+      "tier": 2,
+      "difficulty": "easy_plus",
+      "steps": [
+        {
+          "instruction": "Start with a triangle-shaped head - foxes have pointy faces!",
+          "shapes": [
+            {
+              "type": "triangle",
+              "p1": {"x": 25, "y": 12},
+              "p2": {"x": 18, "y": 30},
+              "p3": {"x": 32, "y": 30}
+            }
+          ]
+        },
+        {
+          "instruction": "Add two pointy ears on top!",
+          "shapes": [
+            {
+              "type": "triangle",
+              "p1": {"x": 20, "y": 8},
+              "p2": {"x": 24, "y": 8},
+              "p3": {"x": 22, "y": 16}
+            },
+            {
+              "type": "triangle",
+              "p1": {"x": 26, "y": 8},
+              "p2": {"x": 30, "y": 8},
+              "p3": {"x": 28, "y": 16}
+            }
+          ]
+        },
+        {
+          "instruction": "Draw two bright eyes!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 21, "y": 20},
+              "radius": 2
+            },
+            {
+              "type": "circle",
+              "center": {"x": 29, "y": 20},
+              "radius": 2
+            }
+          ]
+        },
+        {
+          "instruction": "Add a small black nose at the tip!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 25, "y": 26},
+              "radius": 1
+            }
+          ]
+        },
+        {
+          "instruction": "Draw a sly little smile!",
+          "shapes": [
+            {
+              "type": "polyline",
+              "points": [
+                {"x": 23, "y": 28},
+                {"x": 25, "y": 29},
+                {"x": 27, "y": 28}
+              ]
+            }
+          ]
+        },
+        {
+          "instruction": "Add white chest markings - foxes have white chests!",
+          "shapes": [
+            {
+              "type": "triangle",
+              "p1": {"x": 23, "y": 25},
+              "p2": {"x": 27, "y": 25},
+              "p3": {"x": 25, "y": 30}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "cow",
+      "tier": 2,
+      "difficulty": "easy_plus",
+      "steps": [
+        {
+          "instruction": "Start with a big oval head!",
+          "shapes": [
+            {
+              "type": "ellipse",
+              "center": {"x": 25, "y": 25},
+              "radiusX": 14,
+              "radiusY": 12
+            }
+          ]
+        },
+        {
+          "instruction": "Add two small ears on the sides!",
+          "shapes": [
+            {
+              "type": "ellipse",
+              "center": {"x": 14, "y": 20},
+              "radiusX": 2,
+              "radiusY": 4
+            },
+            {
+              "type": "ellipse",
+              "center": {"x": 36, "y": 20},
+              "radiusX": 2,
+              "radiusY": 4
+            }
+          ]
+        },
+        {
+          "instruction": "Draw two gentle eyes!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 20, "y": 22},
+              "radius": 2
+            },
+            {
+              "type": "circle",
+              "center": {"x": 30, "y": 22},
+              "radius": 2
+            }
+          ]
+        },
+        {
+          "instruction": "Add a big rectangular snout - cows have big noses!",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "origin": {"x": 21, "y": 30},
+              "size": {"width": 8, "height": 5}
+            }
+          ]
+        },
+        {
+          "instruction": "Draw two big nostrils!",
+          "shapes": [
+            {
+              "type": "ellipse",
+              "center": {"x": 23, "y": 32},
+              "radiusX": 1,
+              "radiusY": 1.5
+            },
+            {
+              "type": "ellipse",
+              "center": {"x": 27, "y": 32},
+              "radiusX": 1,
+              "radiusY": 1.5
+            }
+          ]
+        },
+        {
+          "instruction": "Add cow spots on the face!",
+          "shapes": [
+            {
+              "type": "ellipse",
+              "center": {"x": 18, "y": 18},
+              "radiusX": 3,
+              "radiusY": 2
+            },
+            {
+              "type": "circle",
+              "center": {"x": 32, "y": 26},
+              "radius": 2
+            },
+            {
+              "type": "ellipse",
+              "center": {"x": 15, "y": 28},
+              "radiusX": 2,
+              "radiusY": 3
+            }
+          ]
+        },
+        {
+          "instruction": "Add small horns on top!",
+          "shapes": [
+            {
+              "type": "line",
+              "from": {"x": 20, "y": 14},
+              "to": {"x": 18, "y": 10}
+            },
+            {
+              "type": "line",
+              "from": {"x": 30, "y": 14},
+              "to": {"x": 32, "y": 10}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "duck",
+      "tier": 2,
+      "difficulty": "easy_plus",
+      "steps": [
+        {
+          "instruction": "Start with a round head!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 25, "y": 20},
+              "radius": 12
+            }
+          ]
+        },
+        {
+          "instruction": "Add an oval body below the head!",
+          "shapes": [
+            {
+              "type": "ellipse",
+              "center": {"x": 25, "y": 35},
+              "radiusX": 10,
+              "radiusY": 8
+            }
+          ]
+        },
+        {
+          "instruction": "Draw a bright orange beak!",
+          "shapes": [
+            {
+              "type": "triangle",
+              "p1": {"x": 30, "y": 18},
+              "p2": {"x": 30, "y": 22},
+              "p3": {"x": 35, "y": 20}
+            }
+          ]
+        },
+        {
+          "instruction": "Add one visible eye!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 22, "y": 18},
+              "radius": 2
+            }
+          ]
+        },
+        {
+          "instruction": "Draw a wing on the body!",
+          "shapes": [
+            {
+              "type": "ellipse",
+              "center": {"x": 28, "y": 32},
+              "radiusX": 5,
+              "radiusY": 3
+            }
+          ]
+        },
+        {
+          "instruction": "Add webbed feet - ducks are great swimmers!",
+          "shapes": [
+            {
+              "type": "polyline",
+              "points": [
+                {"x": 20, "y": 42},
+                {"x": 18, "y": 45},
+                {"x": 22, "y": 45},
+                {"x": 20, "y": 42}
+              ]
+            },
+            {
+              "type": "polyline",
+              "points": [
+                {"x": 30, "y": 42},
+                {"x": 28, "y": 45},
+                {"x": 32, "y": 45},
+                {"x": 30, "y": 42}
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "chicken",
+      "tier": 2,
+      "difficulty": "easy_plus",
+      "steps": [
+        {
+          "instruction": "Start with a round head!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 25, "y": 18},
+              "radius": 10
+            }
+          ]
+        },
+        {
+          "instruction": "Add a plump oval body!",
+          "shapes": [
+            {
+              "type": "ellipse",
+              "center": {"x": 25, "y": 32},
+              "radiusX": 12,
+              "radiusY": 10
+            }
+          ]
+        },
+        {
+          "instruction": "Draw a red comb on top of the head!",
+          "shapes": [
+            {
+              "type": "polyline",
+              "points": [
+                {"x": 22, "y": 10},
+                {"x": 24, "y": 8},
+                {"x": 25, "y": 10},
+                {"x": 26, "y": 8},
+                {"x": 28, "y": 10},
+                {"x": 25, "y": 12}
+              ]
+            }
+          ]
+        },
+        {
+          "instruction": "Add a bright eye and orange beak!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 22, "y": 16},
+              "radius": 1.5
+            },
+            {
+              "type": "triangle",
+              "p1": {"x": 27, "y": 18},
+              "p2": {"x": 27, "y": 20},
+              "p3": {"x": 30, "y": 19}
+            }
+          ]
+        },
+        {
+          "instruction": "Draw a wing on the body!",
+          "shapes": [
+            {
+              "type": "ellipse",
+              "center": {"x": 30, "y": 30},
+              "radiusX": 6,
+              "radiusY": 4
+            }
+          ]
+        },
+        {
+          "instruction": "Add chicken feet with claws!",
+          "shapes": [
+            {
+              "type": "line",
+              "from": {"x": 22, "y": 40},
+              "to": {"x": 20, "y": 44}
+            },
+            {
+              "type": "line",
+              "from": {"x": 22, "y": 40},
+              "to": {"x": 22, "y": 44}
+            },
+            {
+              "type": "line",
+              "from": {"x": 22, "y": 40},
+              "to": {"x": 24, "y": 44}
+            },
+            {
+              "type": "line",
+              "from": {"x": 28, "y": 40},
+              "to": {"x": 26, "y": 44}
+            },
+            {
+              "type": "line",
+              "from": {"x": 28, "y": 40},
+              "to": {"x": 28, "y": 44}
+            },
+            {
+              "type": "line",
+              "from": {"x": 28, "y": 40},
+              "to": {"x": 30, "y": 44}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "fish",
+      "tier": 2,
+      "difficulty": "easy_plus",
+      "steps": [
+        {
+          "instruction": "Start with an oval body!",
+          "shapes": [
+            {
+              "type": "ellipse",
+              "center": {"x": 25, "y": 25},
+              "radiusX": 12,
+              "radiusY": 8
+            }
+          ]
+        },
+        {
+          "instruction": "Add a triangle tail at the back!",
+          "shapes": [
+            {
+              "type": "triangle",
+              "p1": {"x": 12, "y": 20},
+              "p2": {"x": 12, "y": 30},
+              "p3": {"x": 8, "y": 25}
+            }
+          ]
+        },
+        {
+          "instruction": "Draw a big round eye!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 30, "y": 22},
+              "radius": 3
+            }
+          ]
+        },
+        {
+          "instruction": "Add a pupil in the eye!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 30, "y": 22},
+              "radius": 1
+            }
+          ]
+        },
+        {
+          "instruction": "Draw a small mouth!",
+          "shapes": [
+            {
+              "type": "ellipse",
+              "center": {"x": 35, "y": 25},
+              "radiusX": 2,
+              "radiusY": 1
+            }
+          ]
+        },
+        {
+          "instruction": "Add fins on top and bottom!",
+          "shapes": [
+            {
+              "type": "triangle",
+              "p1": {"x": 25, "y": 16},
+              "p2": {"x": 28, "y": 16},
+              "p3": {"x": 26, "y": 12}
+            },
+            {
+              "type": "triangle",
+              "p1": {"x": 25, "y": 34},
+              "p2": {"x": 28, "y": 34},
+              "p3": {"x": 26, "y": 38}
+            }
+          ]
+        },
+        {
+          "instruction": "Add scales pattern with small lines!",
+          "shapes": [
+            {
+              "type": "line",
+              "from": {"x": 20, "y": 20},
+              "to": {"x": 22, "y": 22}
+            },
+            {
+              "type": "line",
+              "from": {"x": 24, "y": 20},
+              "to": {"x": 26, "y": 22}
+            },
+            {
+              "type": "line",
+              "from": {"x": 20, "y": 28},
+              "to": {"x": 22, "y": 30}
+            },
+            {
+              "type": "line",
+              "from": {"x": 24, "y": 28},
+              "to": {"x": 26, "y": 30}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "turtle",
+      "tier": 2,
+      "difficulty": "easy_plus",
+      "steps": [
+        {
+          "instruction": "Start with a round head poking out!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 25, "y": 15},
+              "radius": 6
+            }
+          ]
+        },
+        {
+          "instruction": "Draw a big oval shell body!",
+          "shapes": [
+            {
+              "type": "ellipse",
+              "center": {"x": 25, "y": 30},
+              "radiusX": 15,
+              "radiusY": 12
+            }
+          ]
+        },
+        {
+          "instruction": "Add two small eyes!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 23, "y": 13},
+              "radius": 1
+            },
+            {
+              "type": "circle",
+              "center": {"x": 27, "y": 13},
+              "radius": 1
+            }
+          ]
+        },
+        {
+          "instruction": "Draw shell pattern with hexagons!",
+          "shapes": [
+            {
+              "type": "polyline",
+              "points": [
+                {"x": 20, "y": 25},
+                {"x": 22, "y": 23},
+                {"x": 26, "y": 23},
+                {"x": 28, "y": 25},
+                {"x": 26, "y": 27},
+                {"x": 22, "y": 27},
+                {"x": 20, "y": 25}
+              ]
+            },
+            {
+              "type": "polyline",
+              "points": [
+                {"x": 15, "y": 30},
+                {"x": 17, "y": 28},
+                {"x": 21, "y": 28},
+                {"x": 23, "y": 30},
+                {"x": 21, "y": 32},
+                {"x": 17, "y": 32},
+                {"x": 15, "y": 30}
+              ]
+            },
+            {
+              "type": "polyline",
+              "points": [
+                {"x": 27, "y": 30},
+                {"x": 29, "y": 28},
+                {"x": 33, "y": 28},
+                {"x": 35, "y": 30},
+                {"x": 33, "y": 32},
+                {"x": 29, "y": 32},
+                {"x": 27, "y": 30}
+              ]
+            }
+          ]
+        },
+        {
+          "instruction": "Add four little feet sticking out!",
+          "shapes": [
+            {
+              "type": "ellipse",
+              "center": {"x": 12, "y": 28},
+              "radiusX": 3,
+              "radiusY": 2
+            },
+            {
+              "type": "ellipse",
+              "center": {"x": 38, "y": 28},
+              "radiusX": 3,
+              "radiusY": 2
+            },
+            {
+              "type": "ellipse",
+              "center": {"x": 15, "y": 38},
+              "radiusX": 3,
+              "radiusY": 2
+            },
+            {
+              "type": "ellipse",
+              "center": {"x": 35, "y": 38},
+              "radiusX": 3,
+              "radiusY": 2
+            }
+          ]
+        },
+        {
+          "instruction": "Add a small tail!",
+          "shapes": [
+            {
+              "type": "triangle",
+              "p1": {"x": 25, "y": 40},
+              "p2": {"x": 27, "y": 40},
+              "p3": {"x": 26, "y": 43}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "penguin",
+      "tier": 2,
+      "difficulty": "easy_plus",
+      "steps": [
+        {
+          "instruction": "Start with a round head!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 25, "y": 18},
+              "radius": 10
+            }
+          ]
+        },
+        {
+          "instruction": "Add a big oval body!",
+          "shapes": [
+            {
+              "type": "ellipse",
+              "center": {"x": 25, "y": 35},
+              "radiusX": 12,
+              "radiusY": 15
+            }
+          ]
+        },
+        {
+          "instruction": "Draw two small eyes!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 22, "y": 16},
+              "radius": 1.5
+            },
+            {
+              "type": "circle",
+              "center": {"x": 28, "y": 16},
+              "radius": 1.5
+            }
+          ]
+        },
+        {
+          "instruction": "Add an orange triangle beak!",
+          "shapes": [
+            {
+              "type": "triangle",
+              "p1": {"x": 24, "y": 20},
+              "p2": {"x": 26, "y": 20},
+              "p3": {"x": 25, "y": 22}
+            }
+          ]
+        },
+        {
+          "instruction": "Draw white belly area!",
+          "shapes": [
+            {
+              "type": "ellipse",
+              "center": {"x": 25, "y": 35},
+              "radiusX": 6,
+              "radiusY": 12
+            }
+          ]
+        },
+        {
+          "instruction": "Add two flippers on the sides!",
+          "shapes": [
+            {
+              "type": "ellipse",
+              "center": {"x": 16, "y": 30},
+              "radiusX": 3,
+              "radiusY": 8
+            },
+            {
+              "type": "ellipse",
+              "center": {"x": 34, "y": 30},
+              "radiusX": 3,
+              "radiusY": 8
+            }
+          ]
+        },
+        {
+          "instruction": "Add orange webbed feet!",
+          "shapes": [
+            {
+              "type": "polyline",
+              "points": [
+                {"x": 20, "y": 48},
+                {"x": 18, "y": 50},
+                {"x": 22, "y": 50},
+                {"x": 20, "y": 48}
+              ]
+            },
+            {
+              "type": "polyline",
+              "points": [
+                {"x": 30, "y": 48},
+                {"x": 28, "y": 50},
+                {"x": 32, "y": 50},
+                {"x": 30, "y": 48}
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "seal",
+      "tier": 2,
+      "difficulty": "easy_plus",
+      "steps": [
+        {
+          "instruction": "Start with a round head!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 25, "y": 20},
+              "radius": 10
+            }
+          ]
+        },
+        {
+          "instruction": "Add a long oval body!",
+          "shapes": [
+            {
+              "type": "ellipse",
+              "center": {"x": 25, "y": 35},
+              "radiusX": 8,
+              "radiusY": 15
+            }
+          ]
+        },
+        {
+          "instruction": "Draw two big friendly eyes!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 22, "y": 18},
+              "radius": 2.5
+            },
+            {
+              "type": "circle",
+              "center": {"x": 28, "y": 18},
+              "radius": 2.5
+            }
+          ]
+        },
+        {
+          "instruction": "Add pupils in the eyes!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 22, "y": 18},
+              "radius": 1
+            },
+            {
+              "type": "circle",
+              "center": {"x": 28, "y": 18},
+              "radius": 1
+            }
+          ]
+        },
+        {
+          "instruction": "Draw a small nose!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 25, "y": 23},
+              "radius": 1
+            }
+          ]
+        },
+        {
+          "instruction": "Add whiskers - seals have long whiskers!",
+          "shapes": [
+            {
+              "type": "line",
+              "from": {"x": 16, "y": 22},
+              "to": {"x": 20, "y": 23}
+            },
+            {
+              "type": "line",
+              "from": {"x": 30, "y": 23},
+              "to": {"x": 34, "y": 22}
+            },
+            {
+              "type": "line",
+              "from": {"x": 16, "y": 25},
+              "to": {"x": 20, "y": 25}
+            },
+            {
+              "type": "line",
+              "from": {"x": 30, "y": 25},
+              "to": {"x": 34, "y": 25}
+            }
+          ]
+        },
+        {
+          "instruction": "Add flippers and tail!",
+          "shapes": [
+            {
+              "type": "ellipse",
+              "center": {"x": 19, "y": 32},
+              "radiusX": 3,
+              "radiusY": 6
+            },
+            {
+              "type": "ellipse",
+              "center": {"x": 31, "y": 32},
+              "radiusX": 3,
+              "radiusY": 6
+            },
+            {
+              "type": "triangle",
+              "p1": {"x": 22, "y": 48},
+              "p2": {"x": 28, "y": 48},
+              "p3": {"x": 25, "y": 52}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "whale",
+      "tier": 2,
+      "difficulty": "easy_plus",
+      "steps": [
+        {
+          "instruction": "Start with a big oval body!",
+          "shapes": [
+            {
+              "type": "ellipse",
+              "center": {"x": 25, "y": 25},
+              "radiusX": 18,
+              "radiusY": 10
+            }
+          ]
+        },
+        {
+          "instruction": "Add a triangle tail at the back!",
+          "shapes": [
+            {
+              "type": "triangle",
+              "p1": {"x": 8, "y": 20},
+              "p2": {"x": 8, "y": 30},
+              "p3": {"x": 4, "y": 25}
+            }
+          ]
+        },
+        {
+          "instruction": "Draw a small eye!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 35, "y": 22},
+              "radius": 2
+            }
+          ]
+        },
+        {
+          "instruction": "Add a mouth line!",
+          "shapes": [
+            {
+              "type": "line",
+              "from": {"x": 38, "y": 28},
+              "to": {"x": 42, "y": 25}
+            }
+          ]
+        },
+        {
+          "instruction": "Draw a blowhole on top for breathing!",
+          "shapes": [
+            {
+              "type": "ellipse",
+              "center": {"x": 30, "y": 17},
+              "radiusX": 2,
+              "radiusY": 1
+            }
+          ]
+        },
+        {
+          "instruction": "Add water spout from the blowhole!",
+          "shapes": [
+            {
+              "type": "polyline",
+              "points": [
+                {"x": 29, "y": 15},
+                {"x": 28, "y": 12},
+                {"x": 30, "y": 10},
+                {"x": 32, "y": 12},
+                {"x": 31, "y": 15}
+              ]
+            }
+          ]
+        },
+        {
+          "instruction": "Add side fins!",
+          "shapes": [
+            {
+              "type": "ellipse",
+              "center": {"x": 28, "y": 32},
+              "radiusX": 5,
+              "radiusY": 2
+            },
+            {
+              "type": "ellipse",
+              "center": {"x": 15, "y": 32},
+              "radiusX": 3,
+              "radiusY": 1.5
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
