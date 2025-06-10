@@ -1,232 +1,294 @@
 import SwiftUI
-import CoreGraphics
-
-// MARK: — JSON-Compatible Point and Size Structs
-
-struct Point: Codable {
-    let x: CGFloat
-    let y: CGFloat
-    
-    var cgPoint: CGPoint {
-        return CGPoint(x: x, y: y)
-    }
-}
-
-struct Size: Codable {
-    let width: CGFloat
-    let height: CGFloat
-    
-    var cgSize: CGSize {
-        return CGSize(width: width, height: height)
-    }
-}
-
-// MARK: — Pixel Primitives
-
-enum PixelShape: Codable {
-    case circle(center: Point, radius: CGFloat)
-    case ellipse(center: Point, radiusX: CGFloat, radiusY: CGFloat)
-    case square(origin: Point, side: CGFloat)
-    case rectangle(origin: Point, size: Size)
-    case triangle(p1: Point, p2: Point, p3: Point)
-    case line(from: Point, to: Point)
-    case polyline(points: [Point])
-    
-    enum CodingKeys: String, CodingKey {
-        case type, center, radius, radiusX, radiusY, origin, side, size, p1, p2, p3, from, to, points
-    }
-    
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        let type = try container.decode(String.self, forKey: .type)
-        
-        switch type {
-        case "circle":
-            let center = try container.decode(Point.self, forKey: .center)
-            let radius = try container.decode(CGFloat.self, forKey: .radius)
-            self = .circle(center: center, radius: radius)
-            
-        case "ellipse":
-            let center = try container.decode(Point.self, forKey: .center)
-            let radiusX = try container.decode(CGFloat.self, forKey: .radiusX)
-            let radiusY = try container.decode(CGFloat.self, forKey: .radiusY)
-            self = .ellipse(center: center, radiusX: radiusX, radiusY: radiusY)
-            
-        case "square":
-            let origin = try container.decode(Point.self, forKey: .origin)
-            let side = try container.decode(CGFloat.self, forKey: .side)
-            self = .square(origin: origin, side: side)
-            
-        case "rectangle":
-            let origin = try container.decode(Point.self, forKey: .origin)
-            let size = try container.decode(Size.self, forKey: .size)
-            self = .rectangle(origin: origin, size: size)
-            
-        case "triangle":
-            let p1 = try container.decode(Point.self, forKey: .p1)
-            let p2 = try container.decode(Point.self, forKey: .p2)
-            let p3 = try container.decode(Point.self, forKey: .p3)
-            self = .triangle(p1: p1, p2: p2, p3: p3)
-            
-        case "line":
-            let from = try container.decode(Point.self, forKey: .from)
-            let to = try container.decode(Point.self, forKey: .to)
-            self = .line(from: from, to: to)
-            
-        case "polyline":
-            let points = try container.decode([Point].self, forKey: .points)
-            self = .polyline(points: points)
-            
-        default:
-            throw DecodingError.dataCorruptedError(forKey: .type, in: container, debugDescription: "Unknown shape type")
-        }
-    }
-    
-    func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        
-        switch self {
-        case .circle(let center, let radius):
-            try container.encode("circle", forKey: .type)
-            try container.encode(center, forKey: .center)
-            try container.encode(radius, forKey: .radius)
-            
-        case .ellipse(let center, let radiusX, let radiusY):
-            try container.encode("ellipse", forKey: .type)
-            try container.encode(center, forKey: .center)
-            try container.encode(radiusX, forKey: .radiusX)
-            try container.encode(radiusY, forKey: .radiusY)
-            
-        case .square(let origin, let side):
-            try container.encode("square", forKey: .type)
-            try container.encode(origin, forKey: .origin)
-            try container.encode(side, forKey: .side)
-            
-        case .rectangle(let origin, let size):
-            try container.encode("rectangle", forKey: .type)
-            try container.encode(origin, forKey: .origin)
-            try container.encode(size, forKey: .size)
-            
-        case .triangle(let p1, let p2, let p3):
-            try container.encode("triangle", forKey: .type)
-            try container.encode(p1, forKey: .p1)
-            try container.encode(p2, forKey: .p2)
-            try container.encode(p3, forKey: .p3)
-            
-        case .line(let from, let to):
-            try container.encode("line", forKey: .type)
-            try container.encode(from, forKey: .from)
-            try container.encode(to, forKey: .to)
-            
-        case .polyline(let points):
-            try container.encode("polyline", forKey: .type)
-            try container.encode(points, forKey: .points)
-        }
-    }
-}
-
-// MARK: — Step & Drawing Models
-
-struct Step: Identifiable, Codable {
-    let id = UUID()
-    let instruction: String
-    let shapes: [PixelShape]
-    
-    // Custom coding keys to exclude auto-generated id
-    enum CodingKeys: String, CodingKey {
-        case instruction, shapes
-    }
-}
-
-struct AnimalDrawing: Codable {
-    let name: String
-    let tier: Int?
-    let difficulty: String?
-    let steps: [Step]
-}
-
-// MARK: — Main View
 
 struct ContentView: View {
     @State private var animalInput = ""
     @State private var drawing: AnimalDrawing?
     @State private var stepIndex = 0
-
+    
+    // Voice control
+    @StateObject private var voiceManager = VoiceManager()
+    @StateObject private var audioFeedback = AudioFeedback()
+    @State private var showWakeWordConfirmation = false
+    
     var body: some View {
         NavigationView {
-            if let drawing = drawing {
-                VStack(spacing: 16) {
-                    Text("Drawing: \(drawing.name.capitalized)")
-                        .font(.title2).bold()
+            ZStack {
+                if let drawing = drawing {
+                    // Drawing View
+                    VStack(spacing: 16) {
+                        Text("Drawing: \(drawing.name.capitalized)")
+                            .font(.title2).bold()
 
-                    PixelCanvas(
-                        shapes: drawing.steps
-                            .prefix(stepIndex + 1)
-                            .flatMap { $0.shapes }
-                    )
-                    .frame(width: 300, height: 300)
-                    .border(Color.gray)
+                        PixelCanvas(
+                            shapes: drawing.steps
+                                .prefix(stepIndex + 1)
+                                .flatMap { $0.shapes }
+                        )
+                        .frame(width: 300, height: 300)
+                        .background(Color(UIColor.systemBackground))
+                        .border(Color.gray)
 
-                    Text(drawing.steps[stepIndex].instruction)
-                        .font(.headline)
-                        .multilineTextAlignment(.center)
-                        .padding(.horizontal)
-
-                    HStack {
-                        Button("Prev") {
-                            stepIndex = max(stepIndex - 1, 0)
-                        }
-                        .disabled(stepIndex == 0)
-
-                        Spacer()
-
-                        Button(stepIndex < drawing.steps.count - 1 ? "Next" : "Done") {
-                            if stepIndex < drawing.steps.count - 1 {
-                                stepIndex += 1
-                            } else {
-                                reset()
+                        // Step instruction with audio button
+                        HStack {
+                            Text(drawing.steps[stepIndex].instruction)
+                                .font(.headline)
+                                .multilineTextAlignment(.center)
+                            
+                            Button(action: {
+                                audioFeedback.speak(drawing.steps[stepIndex].instruction)
+                            }) {
+                                Image(systemName: "speaker.wave.2.fill")
+                                    .foregroundColor(.blue)
                             }
                         }
-                    }
-                    .padding(.horizontal)
-                }
-                .padding()
-                .navigationBarHidden(true)
-
-            } else {
-                VStack(spacing: 16) {
-                    Text("What animal do you want to draw?")
-                        .font(.title2)
-
-                    TextField("bear, pig, frog, owl, rabbit, mouse, elephant, lion...", text: $animalInput)
-                        .textFieldStyle(.roundedBorder)
                         .padding(.horizontal)
 
-                    Button("Start") {
-                        loadDrawing(for: animalInput.lowercased())
+                        // Navigation controls
+                        HStack {
+                            Button("Back") {
+                                goToPreviousStep()
+                            }
+                            .disabled(stepIndex == 0)
+
+                            Spacer()
+                            
+                            // Push-to-talk button
+                            VoiceControlButton(isListening: $voiceManager.isListening) {
+                                if voiceManager.isListening {
+                                    voiceManager.stopListening()
+                                } else {
+                                    voiceManager.startListening()
+                                }
+                            }
+                            
+                            Spacer()
+
+                            Button(stepIndex < drawing.steps.count - 1 ? "Next" : "Done") {
+                                if stepIndex < drawing.steps.count - 1 {
+                                    goToNextStep()
+                                } else {
+                                    reset()
+                                }
+                            }
+                        }
+                        .padding(.horizontal)
                     }
-                    .disabled(animalInput.trimmingCharacters(in: .whitespaces).isEmpty)
+                    .padding()
+                    .toolbar(.hidden, for: .navigationBar)
+
+                } else {
+                    // Home View
+                    VStack(spacing: 20) {
+                        Text("What animal do you want to draw?")
+                            .font(.title2)
+
+                        TextField("Type an animal name...", text: $animalInput)
+                            .textFieldStyle(.roundedBorder)
+                            .padding(.horizontal)
+
+                        Button("Start Drawing") {
+                            loadDrawing(for: animalInput.lowercased())
+                        }
+                        .disabled(animalInput.trimmingCharacters(in: .whitespaces).isEmpty)
+                        
+                        Text("OR")
+                            .font(.caption)
+                            .foregroundColor(.gray)
+                        
+                        // Push-to-talk for voice input
+                        VStack(spacing: 8) {
+                            VoiceControlButton(isListening: $voiceManager.isListening) {
+                                if voiceManager.isListening {
+                                    voiceManager.stopListening()
+                                } else {
+                                    voiceManager.startListening()
+                                }
+                            }
+                            
+                            Text("Hold to speak")
+                                .font(.caption)
+                                .foregroundColor(.gray)
+                        }
+                        
+                        if !voiceManager.recognizedText.isEmpty {
+                            Text("Heard: \"\(voiceManager.recognizedText)\"")
+                                .font(.caption)
+                                .foregroundColor(.blue)
+                                .padding(.horizontal)
+                        }
+                    }
+                    .padding()
+                    .navigationTitle("Draw With Me")
                 }
-                .padding()
-                .navigationTitle("PixelArt MVP")
+                
+                // Wake word confirmation overlay
+                if showWakeWordConfirmation {
+                    WakeWordConfirmation()
+                        .transition(.scale.combined(with: .opacity))
+                        .zIndex(1)
+                }
+                
+                // Voice listening indicator
+                if voiceManager.isListening {
+                    VoiceListeningIndicator()
+                        .transition(.scale.combined(with: .opacity))
+                        .zIndex(2)
+                }
+            }
+        }
+        .onChange(of: voiceManager.currentCommand) { command in
+            handleVoiceCommand(command)
+        }
+        .onChange(of: voiceManager.wakeWordDetected) { detected in
+            if detected {
+                showWakeWordConfirmation = true
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    showWakeWordConfirmation = false
+                    voiceManager.wakeWordDetected = false
+                }
             }
         }
     }
-
+    
+    // MARK: - Voice Command Handling
+    private func handleVoiceCommand(_ command: VoiceManager.Command?) {
+        guard let command = command else { return }
+        
+        switch command {
+        case .drawAnimal(let animal):
+            if drawing == nil {
+                loadDrawing(for: animal)
+                audioFeedback.confirmCommand(animal)
+            }
+            
+        case .next:
+            if drawing != nil {
+                goToNextStep()
+            }
+            
+        case .back:
+            if drawing != nil {
+                goToPreviousStep()
+            }
+            
+        case .done:
+            reset()
+        }
+        
+        // Clear the command after handling
+        voiceManager.currentCommand = nil
+    }
+    
+    // MARK: - Navigation Functions
+    private func goToNextStep() {
+        if let drawing = drawing, stepIndex < drawing.steps.count - 1 {
+            stepIndex += 1
+            audioFeedback.announceStep(drawing.steps[stepIndex].instruction)
+        }
+    }
+    
+    private func goToPreviousStep() {
+        if stepIndex > 0 {
+            stepIndex -= 1
+            if let drawing = drawing {
+                audioFeedback.announceStep(drawing.steps[stepIndex].instruction)
+            }
+        }
+    }
+    
     private func loadDrawing(for animal: String) {
-        drawing = AnimalDatabase.shared.getAnimal(named: animal)
-        stepIndex = 0
+        if let animalDrawing = AnimalDatabase.shared.getAnimal(named: animal) {
+            drawing = animalDrawing
+            stepIndex = 0
+            audioFeedback.announceStep(animalDrawing.steps[0].instruction)
+        } else {
+            // Offline fallback - suggest available animals
+            let available = AnimalDatabase.shared.getAllAnimalNames()
+            audioFeedback.speak("I don't know how to draw \(animal) yet. Try: \(available.prefix(3).joined(separator: ", "))")
+        }
     }
 
     private func reset() {
         drawing = nil
         animalInput = ""
         stepIndex = 0
+        audioFeedback.speak("Great job! What should we draw next?")
     }
 }
 
-// MARK: — Canvas Renderer
+// MARK: - Voice UI Components
+struct VoiceControlButton: View {
+    @Binding var isListening: Bool
+    let action: () -> Void
+    
+    var body: some View {
+        Button(action: action) {
+            ZStack {
+                Circle()
+                    .fill(isListening ? Color.red : Color.blue)
+                    .frame(width: 60, height: 60)
+                
+                Image(systemName: isListening ? "mic.fill" : "mic")
+                    .foregroundColor(.white)
+                    .font(.title2)
+            }
+        }
+        .scaleEffect(isListening ? 1.1 : 1.0)
+        .animation(.easeInOut(duration: 0.2), value: isListening)
+    }
+}
 
+struct VoiceListeningIndicator: View {
+    @State private var animationAmount = 1.0
+    
+    var body: some View {
+        VStack {
+            Spacer()
+            
+            HStack(spacing: 4) {
+                ForEach(0..<3) { i in
+                    Rectangle()
+                        .fill(Color.red)
+                        .frame(width: 4, height: 20)
+                        .scaleEffect(y: animationAmount)
+                        .animation(
+                            Animation.easeInOut(duration: 0.5)
+                                .repeatForever()
+                                .delay(Double(i) * 0.1),
+                            value: animationAmount
+                        )
+                }
+            }
+            .padding()
+            .background(Color.white.opacity(0.9))
+            .cornerRadius(8)
+            .shadow(radius: 4)
+            .padding(.bottom, 100)
+        }
+        .onAppear {
+            animationAmount = 1.5
+        }
+    }
+}
+
+struct WakeWordConfirmation: View {
+    var body: some View {
+        VStack {
+            Image(systemName: "checkmark.circle.fill")
+                .font(.system(size: 50))
+                .foregroundColor(.green)
+            
+            Text("Ready to draw!")
+                .font(.headline)
+        }
+        .padding()
+        .background(Color.white.opacity(0.95))
+        .cornerRadius(20)
+        .shadow(radius: 10)
+    }
+}
+
+// MARK: - Pixel Canvas (with dark mode support)
 struct PixelCanvas: View {
     let shapes: [PixelShape]
     @Environment(\.colorScheme) var colorScheme  // Added for dark mode support
@@ -349,13 +411,14 @@ struct PixelCanvas: View {
     }
 }
 
-// MARK: — Preview
-
+// MARK: - Preview
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
-            .preferredColorScheme(.light)
-        ContentView()
-            .preferredColorScheme(.dark)
+        Group {
+            ContentView()
+                .preferredColorScheme(.light)
+            ContentView()
+                .preferredColorScheme(.dark)
+        }
     }
 }
