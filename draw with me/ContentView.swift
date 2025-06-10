@@ -229,11 +229,15 @@ struct ContentView: View {
 
 struct PixelCanvas: View {
     let shapes: [PixelShape]
+    @Environment(\.colorScheme) var colorScheme  // Added for dark mode support
 
     var body: some View {
         GeometryReader { _ in
             Canvas { context, size in
                 let scale = min(size.width, size.height) / 50
+                
+                // Use adaptive colors that work in both light and dark mode
+                let drawingColor: Color = .primary
 
                 // 1) Stroke head outline
                 if let head = shapes.first {
@@ -260,7 +264,7 @@ struct PixelCanvas: View {
                     default:
                         break
                     }
-                    context.stroke(headPath, with: .color(.black), lineWidth: max(1, scale))
+                    context.stroke(headPath, with: .color(drawingColor), lineWidth: max(1, scale))
                 }
 
                 // 2) Draw all other shapes
@@ -335,9 +339,9 @@ struct PixelCanvas: View {
                     // Stroke for ellipses/lines/polylines; fill everything else
                     switch shape {
                     case .ellipse, .line, .polyline:
-                        context.stroke(path, with: .color(.black), lineWidth: max(1, scale))
+                        context.stroke(path, with: .color(drawingColor), lineWidth: max(1, scale))
                     default:
-                        context.fill(path, with: .color(.black))
+                        context.fill(path, with: .color(drawingColor))
                     }
                 }
             }
@@ -350,5 +354,8 @@ struct PixelCanvas: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .preferredColorScheme(.light)
+        ContentView()
+            .preferredColorScheme(.dark)
     }
 }
