@@ -3,7 +3,7 @@ import CoreGraphics
 
 // MARK: - JSON-Compatible Point and Size Structs
 
-struct Point: Codable {
+struct Point: Codable, Equatable {
     let x: CGFloat
     let y: CGFloat
     
@@ -12,7 +12,7 @@ struct Point: Codable {
     }
 }
 
-struct Size: Codable {
+struct Size: Codable, Equatable {
     let width: CGFloat
     let height: CGFloat
     
@@ -23,7 +23,7 @@ struct Size: Codable {
 
 // MARK: - Pixel Primitives
 
-enum PixelShape: Codable {
+enum PixelShape: Codable, Equatable {
     case circle(center: Point, radius: CGFloat)
     case ellipse(center: Point, radiusX: CGFloat, radiusY: CGFloat)
     case square(origin: Point, side: CGFloat)
@@ -127,7 +127,7 @@ enum PixelShape: Codable {
 
 // MARK: - Step & Drawing Models
 
-struct Step: Identifiable, Codable {
+struct Step: Identifiable, Codable, Equatable {
     let id = UUID()
     let instruction: String
     let shapes: [PixelShape]
@@ -136,11 +136,19 @@ struct Step: Identifiable, Codable {
     enum CodingKeys: String, CodingKey {
         case instruction, shapes
     }
+    
+    static func == (lhs: Step, rhs: Step) -> Bool {
+        return lhs.instruction == rhs.instruction && lhs.shapes == rhs.shapes
+    }
 }
 
-struct AnimalDrawing: Codable {
+struct AnimalDrawing: Codable, Equatable {
     let name: String
     let tier: Int?
     let difficulty: String?
     let steps: [Step]
+    
+    static func == (lhs: AnimalDrawing, rhs: AnimalDrawing) -> Bool {
+        return lhs.name == rhs.name
+    }
 }

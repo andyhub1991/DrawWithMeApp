@@ -398,8 +398,9 @@
 				DEVELOPMENT_TEAM = JC5JYR8R7H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Draw With Me needs microphone access to hear your voice commands for hands-free drawing!";
-				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Draw With Me uses speech recognition to understand your drawing commands like \"draw a cat\" or \"next step\".";
+				INFOPLIST_FILE = "draw-with-me-Info.plist";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Draw With Me needs microphone access to hear your voice command";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Draw With Me needs speech recognition to understand what you want to draw";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -428,8 +429,9 @@
 				DEVELOPMENT_TEAM = JC5JYR8R7H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Draw With Me needs microphone access to hear your voice commands for hands-free drawing!";
-				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Draw With Me uses speech recognition to understand your drawing commands like \"draw a cat\" or \"next step\".";
+				INFOPLIST_FILE = "draw-with-me-Info.plist";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Draw With Me needs microphone access to hear your voice command";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Draw With Me needs speech recognition to understand what you want to draw";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
