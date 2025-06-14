@@ -417,7 +417,8 @@ struct DrawingView: View {
                     PixelCanvas(
                         shapes: animal.steps
                             .prefix(stepIndex + 1)
-                            .flatMap { $0.shapes }
+                            .flatMap { $0.shapes },
+                        animalName: animal.name
                     )
                     .transition(.scale.combined(with: .opacity))
                 }
@@ -623,7 +624,8 @@ struct CompletionView: View {
                     .shadow(radius: 10)
                 
                 PixelCanvas(
-                    shapes: animal.steps.flatMap { $0.shapes }
+                    shapes: animal.steps.flatMap { $0.shapes },
+                    animalName: animal.name
                 )
             }
             .frame(width: 250, height: 250)
@@ -670,6 +672,7 @@ struct CompletionView: View {
 // MARK: - Enhanced Pixel Canvas with Colors
 struct PixelCanvas: View {
     let shapes: [PixelShape]
+    let animalName: String
     @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
@@ -777,6 +780,26 @@ struct PixelCanvas: View {
     private func getStyleForShape(_ shape: PixelShape, at index: Int, allShapes: [PixelShape]) -> (color: Color, shouldFill: Bool, strokeWidth: CGFloat) {
         // Use consistent colors regardless of color scheme - like drawing on paper
         
+        // Special cases for specific animals
+        switch animalName {
+        case "fox":
+            return getFoxColors(shape, at: index)
+        case "duck":
+            return getDuckColors(shape, at: index)
+        case "whale":
+            return getWhaleColors(shape, at: index)
+        case "panda":
+            return getPandaColors(shape, at: index)
+        case "penguin":
+            return getPenguinColors(shape, at: index)
+        case "cow":
+            return getCowColors(shape, at: index)
+        case "sheep":
+            return getSheepColors(shape, at: index)
+        default:
+            break
+        }
+        
         // Analyze shape characteristics
         switch shape {
         case let .circle(center, radius):
@@ -805,6 +828,10 @@ struct PixelCanvas: View {
             }
             // Ears (larger circles, positioned on sides)
             else if radius >= 4 && center.y < 20 {
+                // Check if it's an inner ear
+                if index > 2 && radius <= 2 {
+                    return (Color(red: 1.0, green: 0.6, blue: 0.7), true, 0)
+                }
                 return (Color(red: 0.6, green: 0.4, blue: 0.2), true, 0.5)
             }
             // Head (largest circle, usually first)
@@ -886,6 +913,314 @@ struct PixelCanvas: View {
             else {
                 return (Color.gray.opacity(0.4), true, 0.3)
             }
+        }
+    }
+    
+    // Special color functions for specific animals
+    private func getFoxColors(_ shape: PixelShape, at index: Int) -> (color: Color, shouldFill: Bool, strokeWidth: CGFloat) {
+        switch shape {
+        case .circle:
+            // Head is the first circle
+            if index == 0 {
+                return (Color.orange, false, 0.8)
+            }
+            // Nose
+            return (Color.black, true, 0)
+            
+        case .triangle:
+            // Ears (first two triangles)
+            if index < 2 {
+                return (Color.orange, true, 0.5)
+            }
+            // Inner ears (black)
+            else if index < 4 {
+                return (Color.black, true, 0)
+            }
+            // Snout
+            else {
+                return (Color(red: 1.0, green: 0.8, blue: 0.6), true, 0.3)
+            }
+            
+        case .ellipse:
+            // Eyes - with pupils being smaller ellipses
+            if index == 4 || index == 5 {
+                return (Color.black, true, 0)
+            }
+            else {
+                return (Color.black, true, 0)
+            }
+            
+        case .polyline:
+            // Cheek fluff
+            if index > 7 {
+                return (Color.orange.opacity(0.6), false, 0.8)
+            }
+            // Smile
+            return (Color.black.opacity(0.8), false, 0.6)
+            
+        case .line:
+            // Whiskers
+            return (Color.black.opacity(0.6), false, 0.5)
+            
+        default:
+            return (Color.black.opacity(0.8), false, 0.6)
+        }
+    }
+    
+    private func getDuckColors(_ shape: PixelShape, at index: Int) -> (color: Color, shouldFill: Bool, strokeWidth: CGFloat) {
+        switch shape {
+        case .circle:
+            // Head
+            if index == 0 {
+                return (Color.yellow, false, 0.8)
+            }
+            // Eyes
+            return (Color.black, true, 0)
+            
+        case .ellipse:
+            // Body
+            if index == 1 {
+                return (Color.yellow, false, 0.8)
+            }
+            // Bill
+            else if index == 2 {
+                return (Color.orange, true, 0.3)
+            }
+            // Wing
+            else {
+                return (Color.yellow.opacity(0.7), true, 0.3)
+            }
+            
+        case .polyline:
+            // Webbed feet
+            return (Color.orange, true, 0)
+            
+        case .triangle:
+            // Tail feathers
+            return (Color.yellow.opacity(0.8), true, 0.3)
+            
+        default:
+            return (Color.black.opacity(0.8), false, 0.6)
+        }
+    }
+    
+    private func getWhaleColors(_ shape: PixelShape, at index: Int) -> (color: Color, shouldFill: Bool, strokeWidth: CGFloat) {
+        switch shape {
+        case .ellipse:
+            // Body (first ellipse) or fins
+            if index == 0 {
+                return (Color.blue.opacity(0.7), false, 0.8)
+            }
+            // Blowhole
+            else if index == 4 {
+                return (Color.blue.opacity(0.5), true, 0.3)
+            }
+            // Fins
+            else {
+                return (Color.blue.opacity(0.6), true, 0.3)
+            }
+            
+        case .triangle:
+            // Tail flukes
+            return (Color.blue.opacity(0.7), true, 0.3)
+            
+        case .circle:
+            // Eye
+            return (Color.black, true, 0)
+            
+        case .polyline:
+            // Water spout or smile
+            if index == 5 {
+                return (Color.blue.opacity(0.3), false, 0.8)
+            }
+            return (Color.black.opacity(0.6), false, 0.5)
+            
+        default:
+            return (Color.black.opacity(0.8), false, 0.6)
+        }
+    }
+    
+    private func getPandaColors(_ shape: PixelShape, at index: Int) -> (color: Color, shouldFill: Bool, strokeWidth: CGFloat) {
+        switch shape {
+        case let .circle(_, radius):
+            // Head (first shape, index 0)
+            if index == 0 {
+                return (Color.black, false, 0.8)
+            }
+            // Ears (index 1-2, radius 5)
+            else if index == 1 || index == 2 {
+                return (Color.black, true, 0)
+            }
+            // Eyes (index 5-6, radius 2)
+            else if index == 5 || index == 6 {
+                return (Color.black, true, 0)
+            }
+            // Eye sparkles (index 7-8, radius ~0.6)
+            else if index == 7 || index == 8 {
+                return (Color.white, true, 0)
+            }
+            // Default for any other circles
+            else {
+                return (Color.black, true, 0)
+            }
+            
+        case .ellipse:
+            // Eye patches (index 3-4)
+            if index == 3 || index == 4 {
+                return (Color.black, true, 0)
+            }
+            // Muzzle area (index 10)
+            else {
+                return (Color.white, true, 0.3)
+            }
+            
+        case .triangle:
+            // Nose (index 9)
+            return (Color.black, true, 0)
+            
+        default:
+            // Smile (polyline)
+            return (Color.black.opacity(0.8), false, 0.6)
+        }
+    }
+    
+    private func getPenguinColors(_ shape: PixelShape, at index: Int) -> (color: Color, shouldFill: Bool, strokeWidth: CGFloat) {
+        switch shape {
+        case .circle:
+            // Head or eyes
+            if index == 0 {
+                return (Color.black, false, 0.8)
+            }
+            return (Color.black, true, 0)
+            
+        case .ellipse:
+            // Body
+            if index == 1 {
+                return (Color.black, false, 0.8)
+            }
+            // White belly
+            else if index == 4 {
+                return (Color.white, true, 0.5)
+            }
+            // Flippers
+            else {
+                return (Color.black, true, 0.3)
+            }
+            
+        case .triangle:
+            // Beak
+            return (Color.orange, true, 0)
+            
+        case .polyline:
+            // Feet
+            return (Color.orange, true, 0)
+            
+        default:
+            return (Color.black.opacity(0.8), false, 0.6)
+        }
+    }
+    
+    private func getCowColors(_ shape: PixelShape, at index: Int) -> (color: Color, shouldFill: Bool, strokeWidth: CGFloat) {
+        switch shape {
+        case let .circle(_, radius):
+            // Head (first shape)
+            if index == 0 {
+                return (Color(red: 0.9, green: 0.8, blue: 0.7), false, 0.8)
+            }
+            // Eyes
+            else if radius >= 2 && radius <= 2.5 {
+                return (Color.black, true, 0)
+            }
+            // Small pupils or bell
+            else if radius <= 1 || index > 20 {
+                if index > 20 {
+                    return (Color.yellow, true, 0.5)
+                }
+                return (Color.black, true, 0)
+            }
+            // Spots
+            else {
+                return (Color.black, true, 0)
+            }
+            
+        case .ellipse:
+            // Ears
+            if index < 3 {
+                return (Color(red: 0.8, green: 0.6, blue: 0.5), true, 0.3)
+            }
+            // Snout (pink)
+            else if index == 4 {
+                return (Color(red: 1.0, green: 0.7, blue: 0.7), true, 0.3)
+            }
+            // Nostrils or spots
+            else {
+                return (Color.black, true, 0)
+            }
+            
+        case .line:
+            // Eyelashes
+            return (Color.black, false, 0.4)
+            
+        case .polyline:
+            // Horns or smile
+            if index < 20 {
+                return (Color(red: 0.6, green: 0.5, blue: 0.4), false, 0.8)
+            }
+            return (Color.black.opacity(0.8), false, 0.6)
+            
+        case .rectangle:
+            // Bell strap
+            return (Color(red: 0.6, green: 0.4, blue: 0.2), true, 0)
+            
+        default:
+            return (Color.black.opacity(0.8), false, 0.6)
+        }
+    }
+    
+    private func getSheepColors(_ shape: PixelShape, at index: Int) -> (color: Color, shouldFill: Bool, strokeWidth: CGFloat) {
+        switch shape {
+        case let .circle(_, radius):
+            // Head (first shape)
+            if index == 0 {
+                return (Color.white, false, 0.8)
+            }
+            // Wool bumps
+            else if radius >= 2.5 {
+                return (Color.white, true, 0.5)
+            }
+            // Eyes or other small features
+            else {
+                return (Color.black, true, 0)
+            }
+            
+        case .ellipse:
+            // Face (dark)
+            if index == 11 {
+                return (Color(red: 0.3, green: 0.3, blue: 0.3), true, 0)
+            }
+            // Ears (pink)
+            else if index < 14 {
+                return (Color(red: 1.0, green: 0.7, blue: 0.7), true, 0.3)
+            }
+            // Sleepy eyes
+            else {
+                return (Color.white, true, 0)
+            }
+            
+        case .triangle:
+            // Nose (pink)
+            return (Color(red: 1.0, green: 0.6, blue: 0.7), true, 0)
+            
+        case .polyline:
+            // Smile
+            return (Color.white, false, 0.5)
+            
+        case .rectangle:
+            // Hooves
+            return (Color.black, true, 0)
+            
+        default:
+            return (Color.black.opacity(0.8), false, 0.6)
         }
     }
 }

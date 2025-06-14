@@ -139,21 +139,6 @@
               "to": {"x": 42, "y": 34}
             }
           ]
-        },
-        {
-          "instruction": "Add small cheek spots to make our cat extra adorable!",
-          "shapes": [
-            {
-              "type": "circle",
-              "center": {"x": 14, "y": 30},
-              "radius": 1
-            },
-            {
-              "type": "circle",
-              "center": {"x": 36, "y": 30},
-              "radius": 1
-            }
-          ]
         }
       ]
     },
@@ -266,21 +251,6 @@
               "center": {"x": 25, "y": 37},
               "radiusX": 2,
               "radiusY": 1
-            }
-          ]
-        },
-        {
-          "instruction": "Add cute eyebrow spots - many dogs have these markings!",
-          "shapes": [
-            {
-              "type": "circle",
-              "center": {"x": 18, "y": 18},
-              "radius": 1
-            },
-            {
-              "type": "circle",
-              "center": {"x": 32, "y": 18},
-              "radius": 1
             }
           ]
         }
@@ -422,21 +392,6 @@
               ]
             }
           ]
-        },
-        {
-          "instruction": "Add a small star marking on the forehead - many horses have this!",
-          "shapes": [
-            {
-              "type": "polyline",
-              "points": [
-                {"x": 25, "y": 17},
-                {"x": 24, "y": 19},
-                {"x": 25, "y": 20},
-                {"x": 26, "y": 19},
-                {"x": 25, "y": 17}
-              ]
-            }
-          ]
         }
       ]
     },
@@ -456,16 +411,16 @@
           ]
         },
         {
-          "instruction": "Add two perfectly round ears on top!",
+          "instruction": "Add two perfectly round black ears on top!",
           "shapes": [
             {
               "type": "circle",
-              "center": {"x": 14, "y": 12},
+              "center": {"x": 15, "y": 12},
               "radius": 5
             },
             {
               "type": "circle",
-              "center": {"x": 36, "y": 12},
+              "center": {"x": 35, "y": 12},
               "radius": 5
             }
           ]
@@ -488,17 +443,32 @@
           ]
         },
         {
-          "instruction": "Add bright little eyes inside the patches!",
+          "instruction": "Add matching black eyes inside the patches!",
           "shapes": [
             {
               "type": "circle",
               "center": {"x": 20, "y": 22},
-              "radius": 1.5
+              "radius": 2
             },
             {
               "type": "circle",
               "center": {"x": 30, "y": 22},
-              "radius": 1.5
+              "radius": 2
+            }
+          ]
+        },
+        {
+          "instruction": "Add tiny white sparkles in the eyes to make them shine!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 21, "y": 21},
+              "radius": 0.6
+            },
+            {
+              "type": "circle",
+              "center": {"x": 31, "y": 21},
+              "radius": 0.6
             }
           ]
         },
@@ -538,46 +508,6 @@
               ]
             }
           ]
-        },
-        {
-          "instruction": "Add tiny cheek spots to make our panda extra adorable!",
-          "shapes": [
-            {
-              "type": "circle",
-              "center": {"x": 16, "y": 30},
-              "radius": 1
-            },
-            {
-              "type": "circle",
-              "center": {"x": 34, "y": 30},
-              "radius": 1
-            }
-          ]
-        },
-        {
-          "instruction": "Give our panda some bamboo whisker spots!",
-          "shapes": [
-            {
-              "type": "circle",
-              "center": {"x": 13, "y": 32},
-              "radius": 0.5
-            },
-            {
-              "type": "circle",
-              "center": {"x": 37, "y": 32},
-              "radius": 0.5
-            },
-            {
-              "type": "circle",
-              "center": {"x": 13, "y": 28},
-              "radius": 0.5
-            },
-            {
-              "type": "circle",
-              "center": {"x": 37, "y": 28},
-              "radius": 0.5
-            }
-          ]
         }
       ]
     },
@@ -608,6 +538,21 @@
               "type": "circle",
               "center": {"x": 35, "y": 12},
               "radius": 4
+            }
+          ]
+        },
+        {
+          "instruction": "Draw inner ears to make them more detailed!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 15, "y": 12},
+              "radius": 2
+            },
+            {
+              "type": "circle",
+              "center": {"x": 35, "y": 12},
+              "radius": 2
             }
           ]
         },
@@ -998,79 +943,118 @@
           ]
         },
         {
-          "instruction": "Add fluffy wool bumps around the head!",
+          "instruction": "Add lots of fluffy wool bumps all around the head!",
           "shapes": [
             {
               "type": "circle",
-              "center": {"x": 12, "y": 20},
-              "radius": 3
+              "center": {"x": 12, "y": 18},
+              "radius": 3.5
             },
             {
               "type": "circle",
-              "center": {"x": 38, "y": 20},
-              "radius": 3
+              "center": {"x": 38, "y": 18},
+              "radius": 3.5
             },
             {
               "type": "circle",
               "center": {"x": 25, "y": 8},
+              "radius": 3.5
+            },
+            {
+              "type": "circle",
+              "center": {"x": 18, "y": 10},
               "radius": 3
             },
             {
               "type": "circle",
-              "center": {"x": 18, "y": 11},
-              "radius": 2
+              "center": {"x": 32, "y": 10},
+              "radius": 3
             },
             {
               "type": "circle",
-              "center": {"x": 32, "y": 11},
-              "radius": 2
+              "center": {"x": 10, "y": 25},
+              "radius": 3
+            },
+            {
+              "type": "circle",
+              "center": {"x": 40, "y": 25},
+              "radius": 3
+            },
+            {
+              "type": "circle",
+              "center": {"x": 15, "y": 32},
+              "radius": 3
+            },
+            {
+              "type": "circle",
+              "center": {"x": 35, "y": 32},
+              "radius": 3
+            },
+            {
+              "type": "circle",
+              "center": {"x": 25, "y": 37},
+              "radius": 2.5
             }
           ]
         },
         {
-          "instruction": "Draw two small ears!",
+          "instruction": "Draw a dark face in the middle of all that wool!",
           "shapes": [
             {
               "type": "ellipse",
-              "center": {"x": 16, "y": 16},
-              "radiusX": 2,
-              "radiusY": 3
-            },
-            {
-              "type": "ellipse",
-              "center": {"x": 34, "y": 16},
-              "radiusX": 2,
-              "radiusY": 3
+              "center": {"x": 25, "y": 24},
+              "radiusX": 10,
+              "radiusY": 11
             }
           ]
         },
         {
-          "instruction": "Add two dot eyes!",
+          "instruction": "Add two small pink ears peeking out!",
           "shapes": [
             {
-              "type": "circle",
+              "type": "ellipse",
+              "center": {"x": 16, "y": 20},
+              "radiusX": 2.5,
+              "radiusY": 4
+            },
+            {
+              "type": "ellipse",
+              "center": {"x": 34, "y": 20},
+              "radiusX": 2.5,
+              "radiusY": 4
+            }
+          ]
+        },
+        {
+          "instruction": "Draw two sweet sleepy eyes!",
+          "shapes": [
+            {
+              "type": "ellipse",
               "center": {"x": 21, "y": 22},
-              "radius": 1.5
+              "radiusX": 1.5,
+              "radiusY": 0.8
             },
             {
-              "type": "circle",
+              "type": "ellipse",
               "center": {"x": 29, "y": 22},
-              "radius": 1.5
+              "radiusX": 1.5,
+              "radiusY": 0.8
             }
           ]
         },
         {
-          "instruction": "Draw a small black nose!",
+          "instruction": "Add a cute pink nose!",
           "shapes": [
             {
-              "type": "circle",
-              "center": {"x": 25, "y": 28},
-              "radius": 1
+              "type": "triangle",
+              "p1": {"x": 24, "y": 28},
+              "p2": {"x": 26, "y": 28},
+              "p3": {"x": 25, "y": 30}
             }
           ]
         },
         {
-          "instruction": "Add a gentle smile!",
+          "instruction": "Draw a gentle smile!",
           "shapes": [
             {
               "type": "polyline",
@@ -1079,6 +1063,21 @@
                 {"x": 25, "y": 33},
                 {"x": 27, "y": 32}
               ]
+            }
+          ]
+        },
+        {
+          "instruction": "Add tiny hooves at the bottom!",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "origin": {"x": 18, "y": 39},
+              "size": {"width": 3, "height": 2}
+            },
+            {
+              "type": "rectangle",
+              "origin": {"x": 29, "y": 39},
+              "size": {"width": 3, "height": 2}
             }
           ]
         }
@@ -1375,23 +1374,17 @@
           ]
         },
         {
-          "instruction": "Add trunk tip and nostrils!",
+          "instruction": "Add trunk wrinkles for detail!",
           "shapes": [
             {
-              "type": "ellipse",
-              "center": {"x": 23, "y": 42.5},
-              "radiusX": 2,
-              "radiusY": 1
+              "type": "line",
+              "from": {"x": 25, "y": 34},
+              "to": {"x": 27, "y": 34}
             },
             {
-              "type": "circle",
-              "center": {"x": 22, "y": 42},
-              "radius": 0.5
-            },
-            {
-              "type": "circle",
-              "center": {"x": 24, "y": 42},
-              "radius": 0.5
+              "type": "line",
+              "from": {"x": 24, "y": 38},
+              "to": {"x": 26, "y": 38}
             }
           ]
         }
@@ -1635,79 +1628,149 @@
       "difficulty": "easy_plus",
       "steps": [
         {
-          "instruction": "Start with a triangle-shaped head - foxes have pointy faces!",
+          "instruction": "Start with a round head for our clever fox!",
           "shapes": [
             {
-              "type": "triangle",
-              "p1": {"x": 25, "y": 12},
-              "p2": {"x": 18, "y": 30},
-              "p3": {"x": 32, "y": 30}
+              "type": "circle",
+              "center": {"x": 25, "y": 22},
+              "radius": 14
             }
           ]
         },
         {
-          "instruction": "Add two pointy ears on top!",
+          "instruction": "Add two tall pointy ears - foxes have big ears!",
           "shapes": [
             {
               "type": "triangle",
-              "p1": {"x": 20, "y": 8},
-              "p2": {"x": 24, "y": 8},
-              "p3": {"x": 22, "y": 16}
+              "p1": {"x": 14, "y": 7},
+              "p2": {"x": 22, "y": 7},
+              "p3": {"x": 18, "y": 16}
             },
             {
               "type": "triangle",
-              "p1": {"x": 26, "y": 8},
-              "p2": {"x": 30, "y": 8},
-              "p3": {"x": 28, "y": 16}
+              "p1": {"x": 28, "y": 7},
+              "p2": {"x": 36, "y": 7},
+              "p3": {"x": 32, "y": 16}
             }
           ]
         },
         {
-          "instruction": "Draw two bright eyes!",
+          "instruction": "Draw black inner ears to make them pop!",
           "shapes": [
             {
-              "type": "circle",
-              "center": {"x": 21, "y": 20},
-              "radius": 2
+              "type": "triangle",
+              "p1": {"x": 16.5, "y": 10},
+              "p2": {"x": 19.5, "y": 10},
+              "p3": {"x": 18, "y": 14}
             },
             {
-              "type": "circle",
-              "center": {"x": 29, "y": 20},
-              "radius": 2
+              "type": "triangle",
+              "p1": {"x": 30.5, "y": 10},
+              "p2": {"x": 33.5, "y": 10},
+              "p3": {"x": 32, "y": 14}
             }
           ]
         },
         {
-          "instruction": "Add a small black nose at the tip!",
+          "instruction": "Add a pointed snout coming down - foxes have long noses!",
+          "shapes": [
+            {
+              "type": "triangle",
+              "p1": {"x": 25, "y": 28},
+              "p2": {"x": 18, "y": 34},
+              "p3": {"x": 32, "y": 34}
+            }
+          ]
+        },
+        {
+          "instruction": "Draw clever almond-shaped eyes!",
+          "shapes": [
+            {
+              "type": "ellipse",
+              "center": {"x": 19, "y": 21},
+              "radiusX": 2.5,
+              "radiusY": 1.5
+            },
+            {
+              "type": "ellipse",
+              "center": {"x": 31, "y": 21},
+              "radiusX": 2.5,
+              "radiusY": 1.5
+            }
+          ]
+        },
+        {
+          "instruction": "Add dark pupils to make the eyes mysterious!",
+          "shapes": [
+            {
+              "type": "ellipse",
+              "center": {"x": 19, "y": 21},
+              "radiusX": 1,
+              "radiusY": 1
+            },
+            {
+              "type": "ellipse",
+              "center": {"x": 31, "y": 21},
+              "radiusX": 1,
+              "radiusY": 1
+            }
+          ]
+        },
+        {
+          "instruction": "Draw a small black nose at the tip of the snout!",
           "shapes": [
             {
               "type": "circle",
-              "center": {"x": 25, "y": 26},
-              "radius": 1
+              "center": {"x": 25, "y": 32},
+              "radius": 1.5
             }
           ]
         },
         {
-          "instruction": "Draw a sly little smile!",
+          "instruction": "Add a sly smile and whiskers!",
           "shapes": [
             {
               "type": "polyline",
               "points": [
-                {"x": 23, "y": 28},
-                {"x": 25, "y": 29},
-                {"x": 27, "y": 28}
+                {"x": 23, "y": 34},
+                {"x": 25, "y": 35},
+                {"x": 27, "y": 34}
               ]
+            },
+            {
+              "type": "line",
+              "from": {"x": 14, "y": 31},
+              "to": {"x": 18, "y": 32}
+            },
+            {
+              "type": "line",
+              "from": {"x": 32, "y": 32},
+              "to": {"x": 36, "y": 31}
             }
           ]
         },
         {
-          "instruction": "Add white chest markings - foxes have white chests!",
+          "instruction": "Add cheek fluff to make our fox extra fluffy!",
           "shapes": [
             {
-              "type": "triangle",
-              "p1": {"x": 23, "y": 25},
-              "p2": {"x": 27, "y": 25},
-              "p3": {"x": 25, "y": 30}
+              "type": "polyline",
+              "points": [
+                {"x": 11, "y": 20},
+                {"x": 13, "y": 22},
+                {"x": 11, "y": 24},
+                {"x": 13, "y": 26},
+                {"x": 11, "y": 28}
+              ]
+            },
+            {
+              "type": "polyline",
+              "points": [
+                {"x": 39, "y": 20},
+                {"x": 37, "y": 22},
+                {"x": 39, "y": 24},
+                {"x": 37, "y": 26},
+                {"x": 39, "y": 28}
+              ]
             }
           ]
         }
@@ -1719,109 +1782,188 @@
       "difficulty": "easy_plus",
       "steps": [
         {
-          "instruction": "Start with a big oval head!",
+          "instruction": "Start with a big round head - cows have gentle faces!",
           "shapes": [
             {
-              "type": "ellipse",
+              "type": "circle",
               "center": {"x": 25, "y": 25},
-              "radiusX": 14,
-              "radiusY": 12
+              "radius": 16
             }
           ]
         },
         {
-          "instruction": "Add two small ears on the sides!",
+          "instruction": "Add two cute ears sticking out on the sides!",
           "shapes": [
             {
               "type": "ellipse",
-              "center": {"x": 14, "y": 20},
-              "radiusX": 2,
-              "radiusY": 4
+              "center": {"x": 10, "y": 20},
+              "radiusX": 3,
+              "radiusY": 5
             },
             {
               "type": "ellipse",
-              "center": {"x": 36, "y": 20},
-              "radiusX": 2,
-              "radiusY": 4
+              "center": {"x": 40, "y": 20},
+              "radiusX": 3,
+              "radiusY": 5
             }
           ]
         },
         {
-          "instruction": "Draw two gentle eyes!",
+          "instruction": "Draw two gentle eyes with long eyelashes!",
           "shapes": [
             {
               "type": "circle",
               "center": {"x": 20, "y": 22},
-              "radius": 2
+              "radius": 2.5
             },
             {
               "type": "circle",
               "center": {"x": 30, "y": 22},
-              "radius": 2
+              "radius": 2.5
             }
           ]
         },
         {
-          "instruction": "Add a big rectangular snout - cows have big noses!",
+          "instruction": "Add pupils and cute eyelashes on top!",
           "shapes": [
             {
-              "type": "rectangle",
-              "origin": {"x": 21, "y": 30},
-              "size": {"width": 8, "height": 5}
-            }
-          ]
-        },
-        {
-          "instruction": "Draw two big nostrils!",
-          "shapes": [
-            {
-              "type": "ellipse",
-              "center": {"x": 23, "y": 32},
-              "radiusX": 1,
-              "radiusY": 1.5
-            },
-            {
-              "type": "ellipse",
-              "center": {"x": 27, "y": 32},
-              "radiusX": 1,
-              "radiusY": 1.5
-            }
-          ]
-        },
-        {
-          "instruction": "Add cow spots on the face!",
-          "shapes": [
-            {
-              "type": "ellipse",
-              "center": {"x": 18, "y": 18},
-              "radiusX": 3,
-              "radiusY": 2
+              "type": "circle",
+              "center": {"x": 20, "y": 22},
+              "radius": 1
             },
             {
               "type": "circle",
-              "center": {"x": 32, "y": 26},
-              "radius": 2
+              "center": {"x": 30, "y": 22},
+              "radius": 1
             },
             {
-              "type": "ellipse",
-              "center": {"x": 15, "y": 28},
-              "radiusX": 2,
-              "radiusY": 3
+              "type": "line",
+              "from": {"x": 18, "y": 19},
+              "to": {"x": 19, "y": 17}
+            },
+            {
+              "type": "line",
+              "from": {"x": 20, "y": 19},
+              "to": {"x": 20, "y": 17}
+            },
+            {
+              "type": "line",
+              "from": {"x": 22, "y": 19},
+              "to": {"x": 21, "y": 17}
+            },
+            {
+              "type": "line",
+              "from": {"x": 28, "y": 19},
+              "to": {"x": 29, "y": 17}
+            },
+            {
+              "type": "line",
+              "from": {"x": 30, "y": 19},
+              "to": {"x": 30, "y": 17}
+            },
+            {
+              "type": "line",
+              "from": {"x": 32, "y": 19},
+              "to": {"x": 31, "y": 17}
             }
           ]
         },
         {
-          "instruction": "Add small horns on top!",
+          "instruction": "Draw a big pink snout - cows have special noses!",
           "shapes": [
             {
-              "type": "line",
-              "from": {"x": 20, "y": 14},
-              "to": {"x": 18, "y": 10}
+              "type": "ellipse",
+              "center": {"x": 25, "y": 32},
+              "radiusX": 6,
+              "radiusY": 4
+            }
+          ]
+        },
+        {
+          "instruction": "Add two big nostrils for breathing!",
+          "shapes": [
+            {
+              "type": "ellipse",
+              "center": {"x": 22, "y": 32},
+              "radiusX": 1.5,
+              "radiusY": 2
             },
             {
-              "type": "line",
-              "from": {"x": 30, "y": 14},
-              "to": {"x": 32, "y": 10}
+              "type": "ellipse",
+              "center": {"x": 28, "y": 32},
+              "radiusX": 1.5,
+              "radiusY": 2
+            }
+          ]
+        },
+        {
+          "instruction": "Add some black and white cow spots!",
+          "shapes": [
+            {
+              "type": "ellipse",
+              "center": {"x": 15, "y": 15},
+              "radiusX": 4,
+              "radiusY": 3
+            },
+            {
+              "type": "circle",
+              "center": {"x": 35, "y": 18},
+              "radius": 3
+            },
+            {
+              "type": "ellipse",
+              "center": {"x": 12, "y": 30},
+              "radiusX": 3,
+              "radiusY": 4
+            },
+            {
+              "type": "circle",
+              "center": {"x": 37, "y": 28},
+              "radius": 2.5
+            }
+          ]
+        },
+        {
+          "instruction": "Add small horns and a happy smile!",
+          "shapes": [
+            {
+              "type": "polyline",
+              "points": [
+                {"x": 18, "y": 10},
+                {"x": 17, "y": 8},
+                {"x": 16, "y": 7}
+              ]
+            },
+            {
+              "type": "polyline",
+              "points": [
+                {"x": 32, "y": 10},
+                {"x": 33, "y": 8},
+                {"x": 34, "y": 7}
+              ]
+            },
+            {
+              "type": "polyline",
+              "points": [
+                {"x": 22, "y": 36},
+                {"x": 25, "y": 37},
+                {"x": 28, "y": 36}
+              ]
+            }
+          ]
+        },
+        {
+          "instruction": "Add a bell around the neck - moo!",
+          "shapes": [
+            {
+              "type": "circle",
+              "center": {"x": 25, "y": 42},
+              "radius": 3
+            },
+            {
+              "type": "rectangle",
+              "origin": {"x": 24, "y": 39},
+              "size": {"width": 2, "height": 3}
             }
           ]
         }
@@ -1837,40 +1979,45 @@
           "shapes": [
             {
               "type": "circle",
-              "center": {"x": 25, "y": 20},
-              "radius": 12
+              "center": {"x": 25, "y": 18},
+              "radius": 10
             }
           ]
         },
         {
-          "instruction": "Add an oval body below the head!",
+          "instruction": "Add a plump oval body below!",
           "shapes": [
             {
               "type": "ellipse",
-              "center": {"x": 25, "y": 35},
-              "radiusX": 10,
+              "center": {"x": 25, "y": 32},
+              "radiusX": 12,
               "radiusY": 8
             }
           ]
         },
         {
-          "instruction": "Draw a bright orange beak!",
+          "instruction": "Draw a wide flat bill - ducks have special beaks!",
           "shapes": [
             {
-              "type": "triangle",
-              "p1": {"x": 30, "y": 18},
-              "p2": {"x": 30, "y": 22},
-              "p3": {"x": 35, "y": 20}
+              "type": "ellipse",
+              "center": {"x": 32, "y": 18},
+              "radiusX": 4,
+              "radiusY": 2
             }
           ]
         },
         {
-          "instruction": "Add one visible eye!",
+          "instruction": "Add two small eyes!",
           "shapes": [
             {
               "type": "circle",
-              "center": {"x": 22, "y": 18},
-              "radius": 2
+              "center": {"x": 22, "y": 16},
+              "radius": 1.5
+            },
+            {
+              "type": "circle",
+              "center": {"x": 28, "y": 16},
+              "radius": 1.5
             }
           ]
         },
@@ -1879,32 +2026,47 @@
           "shapes": [
             {
               "type": "ellipse",
-              "center": {"x": 28, "y": 32},
-              "radiusX": 5,
-              "radiusY": 3
+              "center": {"x": 20, "y": 30},
+              "radiusX": 6,
+              "radiusY": 4
             }
           ]
         },
         {
-          "instruction": "Add webbed feet - ducks are great swimmers!",
+          "instruction": "Add orange webbed feet - ducks are swimmers!",
           "shapes": [
             {
               "type": "polyline",
               "points": [
+                {"x": 20, "y": 39},
                 {"x": 20, "y": 42},
-                {"x": 18, "y": 45},
-                {"x": 22, "y": 45},
+                {"x": 17, "y": 45},
+                {"x": 20, "y": 43},
+                {"x": 23, "y": 45},
                 {"x": 20, "y": 42}
               ]
             },
             {
               "type": "polyline",
               "points": [
+                {"x": 30, "y": 39},
                 {"x": 30, "y": 42},
-                {"x": 28, "y": 45},
-                {"x": 32, "y": 45},
+                {"x": 27, "y": 45},
+                {"x": 30, "y": 43},
+                {"x": 33, "y": 45},
                 {"x": 30, "y": 42}
               ]
+            }
+          ]
+        },
+        {
+          "instruction": "Add tail feathers sticking up!",
+          "shapes": [
+            {
+              "type": "triangle",
+              "p1": {"x": 14, "y": 28},
+              "p2": {"x": 12, "y": 24},
+              "p3": {"x": 16, "y": 26}
             }
           ]
         }
@@ -1953,7 +2115,7 @@
           ]
         },
         {
-          "instruction": "Add a bright eye and orange beak!",
+          "instruction": "Add a bright eye and pointed beak!",
           "shapes": [
             {
               "type": "circle",
@@ -1962,9 +2124,9 @@
             },
             {
               "type": "triangle",
-              "p1": {"x": 27, "y": 18},
-              "p2": {"x": 27, "y": 20},
-              "p3": {"x": 30, "y": 19}
+              "p1": {"x": 28, "y": 18},
+              "p2": {"x": 28, "y": 20},
+              "p3": {"x": 31, "y": 19}
             }
           ]
         },
@@ -2092,27 +2254,39 @@
           ]
         },
         {
-          "instruction": "Add scales pattern with small lines!",
+          "instruction": "Add scales pattern with small curves!",
           "shapes": [
             {
-              "type": "line",
-              "from": {"x": 20, "y": 20},
-              "to": {"x": 22, "y": 22}
+              "type": "polyline",
+              "points": [
+                {"x": 20, "y": 22},
+                {"x": 21, "y": 21},
+                {"x": 22, "y": 22}
+              ]
             },
             {
-              "type": "line",
-              "from": {"x": 24, "y": 20},
-              "to": {"x": 26, "y": 22}
+              "type": "polyline",
+              "points": [
+                {"x": 24, "y": 22},
+                {"x": 25, "y": 21},
+                {"x": 26, "y": 22}
+              ]
             },
             {
-              "type": "line",
-              "from": {"x": 20, "y": 28},
-              "to": {"x": 22, "y": 30}
+              "type": "polyline",
+              "points": [
+                {"x": 20, "y": 28},
+                {"x": 21, "y": 29},
+                {"x": 22, "y": 28}
+              ]
             },
             {
-              "type": "line",
-              "from": {"x": 24, "y": 28},
-              "to": {"x": 26, "y": 30}
+              "type": "polyline",
+              "points": [
+                {"x": 24, "y": 28},
+                {"x": 25, "y": 29},
+                {"x": 26, "y": 28}
+              ]
             }
           ]
         }
@@ -2230,13 +2404,15 @@
           ]
         },
         {
-          "instruction": "Add a small tail!",
+          "instruction": "Add a small happy smile!",
           "shapes": [
             {
-              "type": "triangle",
-              "p1": {"x": 25, "y": 40},
-              "p2": {"x": 27, "y": 40},
-              "p3": {"x": 26, "y": 43}
+              "type": "polyline",
+              "points": [
+                {"x": 23, "y": 17},
+                {"x": 25, "y": 18},
+                {"x": 27, "y": 17}
+              ]
             }
           ]
         }
@@ -2469,44 +2645,53 @@
       "difficulty": "easy_plus",
       "steps": [
         {
-          "instruction": "Start with a big oval body!",
+          "instruction": "Start with a huge oval body - whales are giants!",
           "shapes": [
             {
               "type": "ellipse",
-              "center": {"x": 25, "y": 25},
-              "radiusX": 18,
-              "radiusY": 10
+              "center": {"x": 24, "y": 28},
+              "radiusX": 20,
+              "radiusY": 12
             }
           ]
         },
         {
-          "instruction": "Add a triangle tail at the back!",
+          "instruction": "Add a powerful tail flukes - whale tails are horizontal!",
           "shapes": [
             {
               "type": "triangle",
-              "p1": {"x": 8, "y": 20},
-              "p2": {"x": 8, "y": 30},
-              "p3": {"x": 4, "y": 25}
+              "p1": {"x": 5, "y": 25},
+              "p2": {"x": 1, "y": 20},
+              "p3": {"x": 4, "y": 28}
+            },
+            {
+              "type": "triangle",
+              "p1": {"x": 5, "y": 31},
+              "p2": {"x": 1, "y": 36},
+              "p3": {"x": 4, "y": 28}
             }
           ]
         },
         {
-          "instruction": "Draw a small eye!",
+          "instruction": "Draw a small friendly eye!",
           "shapes": [
             {
               "type": "circle",
-              "center": {"x": 35, "y": 22},
+              "center": {"x": 36, "y": 26},
               "radius": 2
             }
           ]
         },
         {
-          "instruction": "Add a mouth line!",
+          "instruction": "Add a gentle smile line!",
           "shapes": [
             {
-              "type": "line",
-              "from": {"x": 38, "y": 28},
-              "to": {"x": 42, "y": 25}
+              "type": "polyline",
+              "points": [
+                {"x": 35, "y": 32},
+                {"x": 40, "y": 30},
+                {"x": 43, "y": 28}
+              ]
             }
           ]
         },
@@ -2515,41 +2700,37 @@
           "shapes": [
             {
               "type": "ellipse",
-              "center": {"x": 30, "y": 17},
+              "center": {"x": 30, "y": 18},
               "radiusX": 2,
               "radiusY": 1
             }
           ]
         },
         {
-          "instruction": "Add water spout from the blowhole!",
+          "instruction": "Add water spout from the blowhole - whales spray water high!",
           "shapes": [
             {
               "type": "polyline",
               "points": [
-                {"x": 29, "y": 15},
-                {"x": 28, "y": 12},
-                {"x": 30, "y": 10},
-                {"x": 32, "y": 12},
-                {"x": 31, "y": 15}
+                {"x": 28, "y": 16},
+                {"x": 27, "y": 12},
+                {"x": 29, "y": 8},
+                {"x": 31, "y": 10},
+                {"x": 33, "y": 8},
+                {"x": 35, "y": 12},
+                {"x": 32, "y": 16}
               ]
             }
           ]
         },
         {
-          "instruction": "Add side fins!",
+          "instruction": "Add small fins on the sides!",
           "shapes": [
             {
               "type": "ellipse",
-              "center": {"x": 28, "y": 32},
-              "radiusX": 5,
+              "center": {"x": 28, "y": 35},
+              "radiusX": 4,
               "radiusY": 2
-            },
-            {
-              "type": "ellipse",
-              "center": {"x": 15, "y": 32},
-              "radiusX": 3,
-              "radiusY": 1.5
             }
           ]
         }
